@@ -134,6 +134,10 @@
 #include "../src/gpgpusim_entrypoint.h"
 #include "../src/stream_manager.h"
 
+
+#include "cuobjdump_parser.h"
+
+
 #include <pthread.h>
 #include <semaphore.h>
 
@@ -1249,7 +1253,7 @@ void setCuobjdumpsassfilename(const char* filename){
 	}
 	(dynamic_cast<cuobjdumpELFSection*>(cuobjdumpSectionList.front()))->setSASSfilename(filename);
 }
-extern int cuobjdump_parse();
+
 extern FILE *cuobjdump_in;
 
 //! Return the executable file of the process containing the PTX/SASS code 
@@ -1329,6 +1333,12 @@ void extract_code_using_cuobjdump(){
 		printf("Parsing file %s\n", fname);
 		cuobjdump_in = fopen(fname, "r");
 
+		printf("SJ: ?????? Parsing file %s\n", fname);
+
+#ifdef yyparse
+		printf("SJ: aaaaa aaaaa !\n");
+
+#endif
 		cuobjdump_parse();
 		fclose(cuobjdump_in);
 		printf("Done parsing!!!\n");
@@ -1344,7 +1354,7 @@ void extract_code_using_cuobjdump(){
 		cmd << "ldd " << app_binary << " | grep $CUDA_INSTALL_PATH | awk \'{print $3}\' > _tempfile_.txt";
 		int result = system(cmd.str().c_str());
 		if(result){
-			std::cout << "Failed to execute: " << cmd << std::endl;
+			std::cout << "Failed to execute: " << cmd.str() << std::endl;
 			exit(1);
 		}
 		std::ifstream libsf;
@@ -1376,7 +1386,7 @@ void extract_code_using_cuobjdump(){
 			if(result) {printf("ERROR: Failed to execute: %s\n", command); exit(1);}
 			std::cout << "Done" << std::endl;
 
-			std::cout << "Trying to parse " << libcodfn << std::endl;
+			std::cout << "Trying to parse " << libcodfn.str() << std::endl;
 			cuobjdump_in = fopen(libcodfn.str().c_str(), "r");
 			cuobjdump_parse();
 			fclose(cuobjdump_in);

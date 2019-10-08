@@ -2,7 +2,7 @@
 #include "intersim2/stats.hpp"
 #include <stdio.h>
 
-Stats* StatCreate (const char * name, double bin_size, int num_bins) {
+class Stats* StatCreate (const char * name, double bin_size, int num_bins) {
    Stats* newstat = new Stats(NULL,name,bin_size,num_bins);
    newstat->Clear ();
    return newstat;  

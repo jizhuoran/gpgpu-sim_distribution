@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zrji/gpgpu-sim_distribution/src/intersim2/lex.yy.c
+stdio.h
+-
+string.h
+-
+errno.h
+-
+stdlib.h
+-
+inttypes.h
+-
+y.tab.h
+/home/zrji/gpgpu-sim_distribution/src/intersim2/y.tab.h
+unistd.h
+-
+
+/home/zrji/gpgpu-sim_distribution/src/intersim2/y.tab.c
+stddef.h
+-
+libintl.h
+-
+alloca.h
+-
+malloc.h
+-
+stdlib.h
+-
+stdlib.h
+-
+stdio.h
+-
+
+/home/zrji/gpgpu-sim_distribution/src/intersim2/y.tab.h
+

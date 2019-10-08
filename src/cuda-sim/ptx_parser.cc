@@ -39,7 +39,7 @@ void set_ptx_warp_size(const struct core_config * warp_size)
    g_shader_core_config=warp_size;
 }
 
-static bool g_debug_ir_generation=false;
+static bool g_debug_ir_generation=true;
 const char *g_filename;
 unsigned g_max_regs_per_thread = 0;
 
@@ -266,6 +266,7 @@ const ptx_instruction *ptx_instruction_lookup( const char *filename, unsigned li
 void add_instruction() 
 {
    PTX_PARSE_DPRINTF("add_instruction: %s", ((g_opcode>0)?g_opcode_string[g_opcode]:"<label>") );
+   // std::cerr << "SJ: add_instruction: " << ((g_opcode>0)?g_opcode_string[g_opcode]:"<label>") << std::endl;
    assert( g_shader_core_config != 0 );
    ptx_instruction *i = new ptx_instruction( g_opcode, 
                                              g_pred, 
@@ -388,6 +389,9 @@ void add_identifier( const char *identifier, int array_dim, unsigned array_ident
    g_last_symbol = g_current_symbol_table->add_variable(identifier,type,num_bits/8,g_filename,ptx_lineno);
    switch ( ti.get_memory_space().get_type() ) {
    case reg_space: {
+
+      // std::cerr << "SJ: this is reg_space " << identifier << std::endl;
+
       regnum = g_current_symbol_table->next_reg_num();
       int arch_regnum = -1;
       for (int d = 0; d < strlen(identifier); d++) {

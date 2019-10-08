@@ -25,6 +25,8 @@
 // OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+// #include <iostream>
+
 #ifndef ABSTRACT_HARDWARE_MODEL_INCLUDED
 #define ABSTRACT_HARDWARE_MODEL_INCLUDED
 
@@ -1026,6 +1028,9 @@ class core_t {
             m_thread = ( ptx_thread_info** )
                      calloc( m_warp_count * m_warp_size,
                              sizeof( ptx_thread_info* ) );
+
+            // std::cerr << "SJ DEBUG: the number of thread pre core is " << m_warp_count * m_warp_size << std::endl;
+
             initilizeSIMTStack(m_warp_count,m_warp_size);
 
             for(unsigned i=0; i<MAX_CTA_PER_SHADER; i++){

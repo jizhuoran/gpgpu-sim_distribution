@@ -47,6 +47,8 @@
 #include "traffic_breakdown.h"
 #include "shader_trace.h"
 
+#include <iostream>
+
 #define PRIORITIZE_MSHR_OVER_WB 1
 #define MAX(a,b) (((a)>(b))?(a):(b))
 #define MIN(a,b) (((a)<(b))?(a):(b))
@@ -567,6 +569,9 @@ void shader_core_ctx::decode()
     if( m_inst_fetch_buffer.m_valid ) {
         // decode 1 or 2 instructions and place them into ibuffer
         address_type pc = m_inst_fetch_buffer.m_pc;
+
+        // std::cerr << "SJ: the pc is " << pc << std::endl;
+
         const warp_inst_t* pI1 = ptx_fetch_inst(pc);
         m_warp[m_inst_fetch_buffer.m_warp_id].ibuffer_fill(0,pI1);
         m_warp[m_inst_fetch_buffer.m_warp_id].inc_inst_in_pipeline();

@@ -1,0 +1,1225 @@
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ DEBUG: the number of thread pre core is 1536
+SJ: this is reg_space %rh0
+SJ: this is reg_space %rh1
+SJ: this is reg_space %rh2
+SJ: this is reg_space %rh3
+SJ: this is reg_space %r0
+SJ: this is reg_space %r1
+SJ: this is reg_space %r2
+SJ: this is reg_space %r3
+SJ: this is reg_space %r4
+SJ: this is reg_space %r5
+SJ: this is reg_space %r6
+SJ: this is reg_space %r7
+SJ: this is reg_space %rd0
+SJ: this is reg_space %rd1
+SJ: this is reg_space %rd2
+SJ: this is reg_space %rd3
+SJ: this is reg_space %rd4
+SJ: this is reg_space %rd5
+SJ: this is reg_space %rd6
+SJ: this is reg_space %rd7
+SJ: this is reg_space %rd8
+SJ: this is reg_space %rd9
+SJ: add_instruction: <label>
+SJ: add_instruction: cvt
+SJ: add_instruction: mov
+SJ: add_instruction: mov
+SJ: add_instruction: mul
+SJ: add_instruction: add
+SJ: add_instruction: cvt
+SJ: add_instruction: mul
+SJ: add_instruction: ld
+SJ: add_instruction: add
+SJ: add_instruction: ld
+SJ: add_instruction: ld
+SJ: add_instruction: add
+SJ: add_instruction: ld
+SJ: add_instruction: div
+SJ: add_instruction: ld
+SJ: add_instruction: add
+SJ: add_instruction: st
+SJ: add_instruction: exit
+SJ: add_instruction: <label>
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 16
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 16
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: the pc is 32
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: the pc is 0
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 16
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: the pc is 16
+SJ: the pc is 32
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 16
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: the pc is 32
+SJ: the pc is 32
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 16
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: the pc is 32
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 48
+SJ: the pc is 16
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 32
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 64
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 16
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 32
+SJ: the pc is 64
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 16
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 48
+SJ: the pc is 32
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: the pc is 64
+SJ: the pc is 0
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: the pc is 64
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 16
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 32
+SJ: the pc is 64
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 16
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 32
+SJ: the pc is 64
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 16
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 32
+SJ: the pc is 64
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 16
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 32
+SJ: the pc is 64
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 16
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 32
+SJ: the pc is 64
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 16
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 32
+SJ: the pc is 64
+SJ: the pc is 0
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %r1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: reg %rh1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: the pc is 16
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rh2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 32
+SJ: the pc is 64
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %r2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 32
+SJ: the pc is 64
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 64
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: the pc is 48
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %r3
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 64
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: the pc is 48
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 64
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: reg %rd1
+SJ: the pc is 48
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd2
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: reg %rd3
+SJ: the pc is 64
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: the pc is 96
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: the pc is 80
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: the pc is 80
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 96
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: the pc is 96
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: reg %rd4
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %r4
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 80
+SJ: the pc is 96
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %rd5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: reg %rd6
+SJ: the pc is 96
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r5
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: reg %r6
+SJ: the pc is 112
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd7
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: reg %rd8
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128
+SJ: the pc is 128

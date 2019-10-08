@@ -44,7 +44,7 @@
 #define NON_ARRAY_IDENTIFIER 1
 #define ARRAY_IDENTIFIER_NO_DIM 2
 #define ARRAY_IDENTIFIER 3
-#define P_DEBUG 0
+#define P_DEBUG 1
 #define PTX_PARSE_DPRINTF(...) \
    if(P_DEBUG) { \
       printf("(%s:%s:%u) ", __FILE__, __FUNCTION__, __LINE__); \

@@ -42,6 +42,7 @@
 #include "../gpgpu-sim/shader.h"
 
 #include <stdarg.h>
+#include <iostream>
 
 unsigned ptx_instruction::g_num_ptx_inst_uid=0;
 
