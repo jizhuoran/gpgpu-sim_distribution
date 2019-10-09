@@ -1541,7 +1541,7 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "cuda-sim/ptx.l"
+#line 1 "ptx.l"
 /*
 Copyright (c) 2009-2011, Tor M. Aamodt
 The University of British Columbia
@@ -1570,7 +1570,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#line 35 "cuda-sim/ptx.l"
+#line 35 "ptx.l"
 #include "opcodes.h"
 #include "ptx.tab.h"
 #include <string.h>
@@ -1805,7 +1805,7 @@ YY_DECL
 		}
 
 	{
-#line 54 "cuda-sim/ptx.l"
+#line 54 "ptx.l"
 
 
 #line 1812 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/lex.ptx_.c"
@@ -1877,1481 +1877,1481 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 56 "cuda-sim/ptx.l"
+#line 56 "ptx.l"
 TC; ptx_lval.int_value = ABS_OP; return OPCODE;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 57 "cuda-sim/ptx.l"
+#line 57 "ptx.l"
 TC; ptx_lval.int_value = ADD_OP; return OPCODE;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 58 "cuda-sim/ptx.l"
+#line 58 "ptx.l"
 TC; ptx_lval.int_value = ADDP_OP; return OPCODE;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 59 "cuda-sim/ptx.l"
+#line 59 "ptx.l"
 TC; ptx_lval.int_value = ADDC_OP; return OPCODE;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 60 "cuda-sim/ptx.l"
+#line 60 "ptx.l"
 TC; ptx_lval.int_value = AND_OP; return OPCODE;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 61 "cuda-sim/ptx.l"
+#line 61 "ptx.l"
 TC; ptx_lval.int_value = ANDN_OP; return OPCODE;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 62 "cuda-sim/ptx.l"
+#line 62 "ptx.l"
 TC; ptx_lval.int_value = ATOM_OP; return OPCODE;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 63 "cuda-sim/ptx.l"
+#line 63 "ptx.l"
 TC; ptx_lval.int_value = BAR_OP; return OPCODE;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 64 "cuda-sim/ptx.l"
+#line 64 "ptx.l"
 TC; ptx_lval.int_value = BFE_OP; return OPCODE;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 65 "cuda-sim/ptx.l"
+#line 65 "ptx.l"
 TC; ptx_lval.int_value = BFI_OP; return OPCODE;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 66 "cuda-sim/ptx.l"
+#line 66 "ptx.l"
 TC; ptx_lval.int_value = BFIND_OP; return OPCODE;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 67 "cuda-sim/ptx.l"
+#line 67 "ptx.l"
 TC; ptx_lval.int_value = BRA_OP; return OPCODE;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 68 "cuda-sim/ptx.l"
+#line 68 "ptx.l"
 TC; ptx_lval.int_value = BRX_OP; return OPCODE;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 69 "cuda-sim/ptx.l"
+#line 69 "ptx.l"
 TC; ptx_lval.int_value = BREV_OP; return OPCODE;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 70 "cuda-sim/ptx.l"
+#line 70 "ptx.l"
 TC; ptx_lval.int_value = BRKPT_OP; return OPCODE;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 71 "cuda-sim/ptx.l"
+#line 71 "ptx.l"
 TC; BEGIN(NOT_OPCODE); ptx_lval.int_value = CALL_OP; return OPCODE; // blocking opcode token in case the callee has the same name as an opcode
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 72 "cuda-sim/ptx.l"
+#line 72 "ptx.l"
 TC; BEGIN(NOT_OPCODE); ptx_lval.int_value = CALLP_OP; return OPCODE;
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 73 "cuda-sim/ptx.l"
+#line 73 "ptx.l"
 TC; ptx_lval.int_value = CLZ_OP; return OPCODE;
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 74 "cuda-sim/ptx.l"
+#line 74 "ptx.l"
 TC; ptx_lval.int_value = CNOT_OP; return OPCODE;
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 75 "cuda-sim/ptx.l"
+#line 75 "ptx.l"
 TC; ptx_lval.int_value = COS_OP; return OPCODE;
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 76 "cuda-sim/ptx.l"
+#line 76 "ptx.l"
 TC; ptx_lval.int_value = CVT_OP; return OPCODE;
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 77 "cuda-sim/ptx.l"
+#line 77 "ptx.l"
 TC; ptx_lval.int_value = CVTA_OP; return OPCODE;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 78 "cuda-sim/ptx.l"
+#line 78 "ptx.l"
 TC; ptx_lval.int_value = DIV_OP; return OPCODE;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 79 "cuda-sim/ptx.l"
+#line 79 "ptx.l"
 TC; ptx_lval.int_value = EX2_OP; return OPCODE;
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 80 "cuda-sim/ptx.l"
+#line 80 "ptx.l"
 TC; ptx_lval.int_value = EXIT_OP; return OPCODE;
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 81 "cuda-sim/ptx.l"
+#line 81 "ptx.l"
 TC; ptx_lval.int_value = FMA_OP; return OPCODE;
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 82 "cuda-sim/ptx.l"
+#line 82 "ptx.l"
 TC; ptx_lval.int_value = ISSPACEP_OP; return OPCODE;
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 83 "cuda-sim/ptx.l"
+#line 83 "ptx.l"
 TC; ptx_lval.int_value = LD_OP; return OPCODE;
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 84 "cuda-sim/ptx.l"
+#line 84 "ptx.l"
 TC; ptx_lval.int_value = LD_OP; return OPCODE;
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 85 "cuda-sim/ptx.l"
+#line 85 "ptx.l"
 TC; ptx_lval.int_value = LDU_OP; return OPCODE;
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 86 "cuda-sim/ptx.l"
+#line 86 "ptx.l"
 TC; ptx_lval.int_value = LG2_OP; return OPCODE;
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 87 "cuda-sim/ptx.l"
+#line 87 "ptx.l"
 TC; ptx_lval.int_value = MAD24_OP; return OPCODE;
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 88 "cuda-sim/ptx.l"
+#line 88 "ptx.l"
 TC; ptx_lval.int_value = MAD_OP; return OPCODE;
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 89 "cuda-sim/ptx.l"
+#line 89 "ptx.l"
 TC; ptx_lval.int_value = MADP_OP; return OPCODE;
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 90 "cuda-sim/ptx.l"
+#line 90 "ptx.l"
 TC; ptx_lval.int_value = MAX_OP; return OPCODE;
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 91 "cuda-sim/ptx.l"
+#line 91 "ptx.l"
 TC; ptx_lval.int_value = MEMBAR_OP; return OPCODE;
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 92 "cuda-sim/ptx.l"
+#line 92 "ptx.l"
 TC; ptx_lval.int_value = MIN_OP; return OPCODE;
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 93 "cuda-sim/ptx.l"
+#line 93 "ptx.l"
 TC; ptx_lval.int_value = MOV_OP; return OPCODE;
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 94 "cuda-sim/ptx.l"
+#line 94 "ptx.l"
 TC; ptx_lval.int_value = MUL24_OP; return OPCODE;
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 95 "cuda-sim/ptx.l"
+#line 95 "ptx.l"
 TC; ptx_lval.int_value = MUL_OP; return OPCODE;
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 96 "cuda-sim/ptx.l"
+#line 96 "ptx.l"
 TC; ptx_lval.int_value = NEG_OP; return OPCODE;
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 97 "cuda-sim/ptx.l"
+#line 97 "ptx.l"
 TC; ptx_lval.int_value = NANDN_OP; return OPCODE;
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 98 "cuda-sim/ptx.l"
+#line 98 "ptx.l"
 TC; ptx_lval.int_value = NORN_OP; return OPCODE;
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 99 "cuda-sim/ptx.l"
+#line 99 "ptx.l"
 TC; ptx_lval.int_value = NOT_OP; return OPCODE;
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 100 "cuda-sim/ptx.l"
+#line 100 "ptx.l"
 TC; ptx_lval.int_value = OR_OP; return OPCODE;
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 101 "cuda-sim/ptx.l"
+#line 101 "ptx.l"
 TC; ptx_lval.int_value = ORN_OP; return OPCODE;
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 102 "cuda-sim/ptx.l"
+#line 102 "ptx.l"
 TC; ptx_lval.int_value = PMEVENT_OP; return OPCODE;
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 103 "cuda-sim/ptx.l"
+#line 103 "ptx.l"
 TC; ptx_lval.int_value = POPC_OP; return OPCODE;
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 104 "cuda-sim/ptx.l"
+#line 104 "ptx.l"
 TC; ptx_lval.int_value = PREFETCH_OP; return OPCODE;
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 105 "cuda-sim/ptx.l"
+#line 105 "ptx.l"
 TC; ptx_lval.int_value = PREFETCHU_OP; return OPCODE;
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 106 "cuda-sim/ptx.l"
+#line 106 "ptx.l"
 TC; ptx_lval.int_value = PRMT_OP; return OPCODE;
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
-#line 107 "cuda-sim/ptx.l"
+#line 107 "ptx.l"
 TC; ptx_lval.int_value = RCP_OP; return OPCODE;
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 108 "cuda-sim/ptx.l"
+#line 108 "ptx.l"
 TC; ptx_lval.int_value = RED_OP; return OPCODE;
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 109 "cuda-sim/ptx.l"
+#line 109 "ptx.l"
 TC; ptx_lval.int_value = REM_OP; return OPCODE;
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 110 "cuda-sim/ptx.l"
+#line 110 "ptx.l"
 TC; ptx_lval.int_value = RET_OP; return OPCODE;
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
-#line 111 "cuda-sim/ptx.l"
+#line 111 "ptx.l"
 TC; ptx_lval.int_value = RETP_OP; return OPCODE;
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
-#line 112 "cuda-sim/ptx.l"
+#line 112 "ptx.l"
 TC; ptx_lval.int_value = RSQRT_OP; return OPCODE;
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
-#line 113 "cuda-sim/ptx.l"
+#line 113 "ptx.l"
 TC; ptx_lval.int_value = SAD_OP; return OPCODE;
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
-#line 114 "cuda-sim/ptx.l"
+#line 114 "ptx.l"
 TC; ptx_lval.int_value = SELP_OP; return OPCODE;
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
-#line 115 "cuda-sim/ptx.l"
+#line 115 "ptx.l"
 TC; ptx_lval.int_value = SETP_OP; return OPCODE;
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
-#line 116 "cuda-sim/ptx.l"
+#line 116 "ptx.l"
 TC; ptx_lval.int_value = SET_OP; return OPCODE;
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
-#line 117 "cuda-sim/ptx.l"
+#line 117 "ptx.l"
 TC; ptx_lval.int_value = SHL_OP; return OPCODE;
 	YY_BREAK
 case 63:
 YY_RULE_SETUP
-#line 118 "cuda-sim/ptx.l"
+#line 118 "ptx.l"
 TC; ptx_lval.int_value = SHR_OP; return OPCODE;
 	YY_BREAK
 case 64:
 YY_RULE_SETUP
-#line 119 "cuda-sim/ptx.l"
+#line 119 "ptx.l"
 TC; ptx_lval.int_value = SIN_OP; return OPCODE;
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
-#line 120 "cuda-sim/ptx.l"
+#line 120 "ptx.l"
 TC; ptx_lval.int_value = SLCT_OP; return OPCODE;
 	YY_BREAK
 case 66:
 YY_RULE_SETUP
-#line 121 "cuda-sim/ptx.l"
+#line 121 "ptx.l"
 TC; ptx_lval.int_value = SQRT_OP; return OPCODE;
 	YY_BREAK
 case 67:
 YY_RULE_SETUP
-#line 122 "cuda-sim/ptx.l"
+#line 122 "ptx.l"
 TC; ptx_lval.int_value = SSY_OP; return OPCODE;
 	YY_BREAK
 case 68:
 YY_RULE_SETUP
-#line 123 "cuda-sim/ptx.l"
+#line 123 "ptx.l"
 TC; ptx_lval.int_value = ST_OP; return OPCODE;
 	YY_BREAK
 case 69:
 YY_RULE_SETUP
-#line 124 "cuda-sim/ptx.l"
+#line 124 "ptx.l"
 TC; ptx_lval.int_value = ST_OP; return OPCODE;
 	YY_BREAK
 case 70:
 YY_RULE_SETUP
-#line 125 "cuda-sim/ptx.l"
+#line 125 "ptx.l"
 TC; ptx_lval.int_value = SUB_OP; return OPCODE;
 	YY_BREAK
 case 71:
 YY_RULE_SETUP
-#line 126 "cuda-sim/ptx.l"
+#line 126 "ptx.l"
 TC; ptx_lval.int_value = SUBC_OP; return OPCODE;
 	YY_BREAK
 case 72:
 YY_RULE_SETUP
-#line 127 "cuda-sim/ptx.l"
+#line 127 "ptx.l"
 TC; ptx_lval.int_value = SULD_OP; return OPCODE;
 	YY_BREAK
 case 73:
 YY_RULE_SETUP
-#line 128 "cuda-sim/ptx.l"
+#line 128 "ptx.l"
 TC; ptx_lval.int_value = SURED_OP; return OPCODE;
 	YY_BREAK
 case 74:
 YY_RULE_SETUP
-#line 129 "cuda-sim/ptx.l"
+#line 129 "ptx.l"
 TC; ptx_lval.int_value = SUST_OP; return OPCODE;
 	YY_BREAK
 case 75:
 YY_RULE_SETUP
-#line 130 "cuda-sim/ptx.l"
+#line 130 "ptx.l"
 TC; ptx_lval.int_value = SUQ_OP; return OPCODE;
 	YY_BREAK
 case 76:
 YY_RULE_SETUP
-#line 131 "cuda-sim/ptx.l"
+#line 131 "ptx.l"
 TC; BEGIN(NOT_OPCODE); ptx_lval.int_value = TEX_OP; return OPCODE;
 	YY_BREAK
 case 77:
 YY_RULE_SETUP
-#line 132 "cuda-sim/ptx.l"
+#line 132 "ptx.l"
 TC; ptx_lval.int_value = TEX_OP; return OPCODE;
 	YY_BREAK
 case 78:
 YY_RULE_SETUP
-#line 133 "cuda-sim/ptx.l"
+#line 133 "ptx.l"
 TC; ptx_lval.int_value = TRAP_OP; return OPCODE;
 	YY_BREAK
 case 79:
 YY_RULE_SETUP
-#line 134 "cuda-sim/ptx.l"
+#line 134 "ptx.l"
 TC; ptx_lval.int_value = VABSDIFF_OP; return OPCODE;
 	YY_BREAK
 case 80:
 YY_RULE_SETUP
-#line 135 "cuda-sim/ptx.l"
+#line 135 "ptx.l"
 TC; ptx_lval.int_value = VADD_OP; return OPCODE;
 	YY_BREAK
 case 81:
 YY_RULE_SETUP
-#line 136 "cuda-sim/ptx.l"
+#line 136 "ptx.l"
 TC; ptx_lval.int_value = VMAD_OP; return OPCODE;
 	YY_BREAK
 case 82:
 YY_RULE_SETUP
-#line 137 "cuda-sim/ptx.l"
+#line 137 "ptx.l"
 TC; ptx_lval.int_value = VMAX_OP; return OPCODE;
 	YY_BREAK
 case 83:
 YY_RULE_SETUP
-#line 138 "cuda-sim/ptx.l"
+#line 138 "ptx.l"
 TC; ptx_lval.int_value = VMIN_OP; return OPCODE;
 	YY_BREAK
 case 84:
 YY_RULE_SETUP
-#line 139 "cuda-sim/ptx.l"
+#line 139 "ptx.l"
 TC; ptx_lval.int_value = VSET_OP; return OPCODE;
 	YY_BREAK
 case 85:
 YY_RULE_SETUP
-#line 140 "cuda-sim/ptx.l"
+#line 140 "ptx.l"
 TC; ptx_lval.int_value = VSHL_OP; return OPCODE;
 	YY_BREAK
 case 86:
 YY_RULE_SETUP
-#line 141 "cuda-sim/ptx.l"
+#line 141 "ptx.l"
 TC; ptx_lval.int_value = VSHR_OP; return OPCODE;
 	YY_BREAK
 case 87:
 YY_RULE_SETUP
-#line 142 "cuda-sim/ptx.l"
+#line 142 "ptx.l"
 TC; ptx_lval.int_value = VSUB_OP; return OPCODE;
 	YY_BREAK
 case 88:
 YY_RULE_SETUP
-#line 143 "cuda-sim/ptx.l"
+#line 143 "ptx.l"
 TC; ptx_lval.int_value = VOTE_OP; return OPCODE;
 	YY_BREAK
 case 89:
 YY_RULE_SETUP
-#line 144 "cuda-sim/ptx.l"
+#line 144 "ptx.l"
 TC; ptx_lval.int_value = XOR_OP; return OPCODE;
 	YY_BREAK
 case 90:
 YY_RULE_SETUP
-#line 145 "cuda-sim/ptx.l"
+#line 145 "ptx.l"
 TC; ptx_lval.int_value = NOP_OP; return OPCODE;
 	YY_BREAK
 case 91:
 YY_RULE_SETUP
-#line 146 "cuda-sim/ptx.l"
+#line 146 "ptx.l"
 TC; ptx_lval.int_value = BREAK_OP; return OPCODE;
 	YY_BREAK
 case 92:
 YY_RULE_SETUP
-#line 147 "cuda-sim/ptx.l"
+#line 147 "ptx.l"
 TC; ptx_lval.int_value = BREAKADDR_OP; return OPCODE;
 	YY_BREAK
 
 case 93:
 YY_RULE_SETUP
-#line 151 "cuda-sim/ptx.l"
+#line 151 "ptx.l"
 TC; return ALIGN_DIRECTIVE;
 	YY_BREAK
 case 94:
 YY_RULE_SETUP
-#line 152 "cuda-sim/ptx.l"
+#line 152 "ptx.l"
 TC; return BRANCHTARGETS_DIRECTIVE;
 	YY_BREAK
 case 95:
 YY_RULE_SETUP
-#line 153 "cuda-sim/ptx.l"
+#line 153 "ptx.l"
 TC; return BYTE_DIRECTIVE; /* not in PTX 2.1 */
 	YY_BREAK
 case 96:
 YY_RULE_SETUP
-#line 154 "cuda-sim/ptx.l"
+#line 154 "ptx.l"
 TC; return CALLPROTOTYPE_DIRECTIVE;
 	YY_BREAK
 case 97:
 YY_RULE_SETUP
-#line 155 "cuda-sim/ptx.l"
+#line 155 "ptx.l"
 TC; return CALLTARGETS_DIRECTIVE;
 	YY_BREAK
 case 98:
 YY_RULE_SETUP
-#line 156 "cuda-sim/ptx.l"
+#line 156 "ptx.l"
 TC; ptx_lval.int_value = atoi(yytext+7); return CONST_DIRECTIVE;
 	YY_BREAK
 case 99:
 YY_RULE_SETUP
-#line 157 "cuda-sim/ptx.l"
+#line 157 "ptx.l"
 TC; ptx_lval.int_value = 0; return CONST_DIRECTIVE;
 	YY_BREAK
 case 100:
 YY_RULE_SETUP
-#line 158 "cuda-sim/ptx.l"
+#line 158 "ptx.l"
 TC; return ENTRY_DIRECTIVE;
 	YY_BREAK
 case 101:
 YY_RULE_SETUP
-#line 159 "cuda-sim/ptx.l"
+#line 159 "ptx.l"
 TC; return EXTERN_DIRECTIVE;
 	YY_BREAK
 case 102:
 YY_RULE_SETUP
-#line 160 "cuda-sim/ptx.l"
+#line 160 "ptx.l"
 TC; BEGIN(INITIAL); return FILE_DIRECTIVE;
 	YY_BREAK
 case 103:
 YY_RULE_SETUP
-#line 161 "cuda-sim/ptx.l"
+#line 161 "ptx.l"
 TC; BEGIN(IN_FUNC_DECL); return FUNC_DIRECTIVE; // blocking opcode parsing in case the function has the same name as an opcode (e.g. sin(), cos())
 	YY_BREAK
 case 104:
 YY_RULE_SETUP
-#line 162 "cuda-sim/ptx.l"
+#line 162 "ptx.l"
 TC; return GLOBAL_DIRECTIVE;
 	YY_BREAK
 case 105:
 YY_RULE_SETUP
-#line 163 "cuda-sim/ptx.l"
+#line 163 "ptx.l"
 TC; return LOCAL_DIRECTIVE;
 	YY_BREAK
 case 106:
 YY_RULE_SETUP
-#line 164 "cuda-sim/ptx.l"
+#line 164 "ptx.l"
 TC; return LOC_DIRECTIVE;
 	YY_BREAK
 case 107:
 YY_RULE_SETUP
-#line 165 "cuda-sim/ptx.l"
+#line 165 "ptx.l"
 TC; return MAXNCTAPERSM_DIRECTIVE;
 	YY_BREAK
 case 108:
 YY_RULE_SETUP
-#line 166 "cuda-sim/ptx.l"
+#line 166 "ptx.l"
 TC; return MAXNNREG_DIRECTIVE;
 	YY_BREAK
 case 109:
 YY_RULE_SETUP
-#line 167 "cuda-sim/ptx.l"
+#line 167 "ptx.l"
 TC; return MAXNTID_DIRECTIVE;
 	YY_BREAK
 case 110:
 YY_RULE_SETUP
-#line 168 "cuda-sim/ptx.l"
+#line 168 "ptx.l"
 TC; return MINNCTAPERSM_DIRECTIVE;
 	YY_BREAK
 case 111:
 YY_RULE_SETUP
-#line 169 "cuda-sim/ptx.l"
+#line 169 "ptx.l"
 TC; return PARAM_DIRECTIVE;
 	YY_BREAK
 case 112:
 YY_RULE_SETUP
-#line 170 "cuda-sim/ptx.l"
+#line 170 "ptx.l"
 TC; return PRAGMA_DIRECTIVE;
 	YY_BREAK
 case 113:
 YY_RULE_SETUP
-#line 171 "cuda-sim/ptx.l"
+#line 171 "ptx.l"
 TC; return REG_DIRECTIVE;
 	YY_BREAK
 case 114:
 YY_RULE_SETUP
-#line 172 "cuda-sim/ptx.l"
+#line 172 "ptx.l"
 TC; return REQNTID_DIRECTIVE;
 	YY_BREAK
 case 115:
 YY_RULE_SETUP
-#line 173 "cuda-sim/ptx.l"
+#line 173 "ptx.l"
 TC; return SECTION_DIRECTIVE;
 	YY_BREAK
 case 116:
 YY_RULE_SETUP
-#line 174 "cuda-sim/ptx.l"
+#line 174 "ptx.l"
 TC; return SHARED_DIRECTIVE;
 	YY_BREAK
 case 117:
 YY_RULE_SETUP
-#line 175 "cuda-sim/ptx.l"
+#line 175 "ptx.l"
 TC; return SREG_DIRECTIVE;
 	YY_BREAK
 case 118:
 YY_RULE_SETUP
-#line 176 "cuda-sim/ptx.l"
+#line 176 "ptx.l"
 TC; return STRUCT_DIRECTIVE;
 	YY_BREAK
 case 119:
 YY_RULE_SETUP
-#line 177 "cuda-sim/ptx.l"
+#line 177 "ptx.l"
 TC; return SURF_DIRECTIVE;   /* not in PTX 2.1 */
 	YY_BREAK
 case 120:
 YY_RULE_SETUP
-#line 178 "cuda-sim/ptx.l"
+#line 178 "ptx.l"
 TC; return TARGET_DIRECTIVE;
 	YY_BREAK
 case 121:
 YY_RULE_SETUP
-#line 179 "cuda-sim/ptx.l"
+#line 179 "ptx.l"
 TC; BEGIN(NOT_OPCODE); return TEX_DIRECTIVE;
 	YY_BREAK
 case 122:
 YY_RULE_SETUP
-#line 180 "cuda-sim/ptx.l"
+#line 180 "ptx.l"
 TC; return UNION_DIRECTIVE; /* not in PTX 2.1 */
 	YY_BREAK
 case 123:
 YY_RULE_SETUP
-#line 181 "cuda-sim/ptx.l"
+#line 181 "ptx.l"
 TC; return VERSION_DIRECTIVE;
 	YY_BREAK
 case 124:
 YY_RULE_SETUP
-#line 182 "cuda-sim/ptx.l"
+#line 182 "ptx.l"
 TC; return VISIBLE_DIRECTIVE;
 	YY_BREAK
 case 125:
 YY_RULE_SETUP
-#line 183 "cuda-sim/ptx.l"
+#line 183 "ptx.l"
 TC; return ADDRESS_SIZE_DIRECTIVE;
 	YY_BREAK
 case 126:
 YY_RULE_SETUP
-#line 185 "cuda-sim/ptx.l"
+#line 185 "ptx.l"
 TC; return CONSTPTR_DIRECTIVE; /* Ptx plus directive for pointer to constant memory */
 	YY_BREAK
 case 127:
 YY_RULE_SETUP
-#line 186 "cuda-sim/ptx.l"
+#line 186 "ptx.l"
 TC; return PTR_DIRECTIVE; /* Added for new OpenCL genrated code */
 	YY_BREAK
 case 128:
 YY_RULE_SETUP
-#line 188 "cuda-sim/ptx.l"
+#line 188 "ptx.l"
 TC; ptx_lval.int_value = CLOCK_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 129:
 YY_RULE_SETUP
-#line 189 "cuda-sim/ptx.l"
+#line 189 "ptx.l"
 TC; ptx_lval.int_value = HALFCLOCK_ID; return SPECIAL_REGISTER;
 	YY_BREAK
 case 130:
 YY_RULE_SETUP
-#line 190 "cuda-sim/ptx.l"
+#line 190 "ptx.l"
 TC; ptx_lval.int_value = CLOCK64_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 131:
 YY_RULE_SETUP
-#line 191 "cuda-sim/ptx.l"
+#line 191 "ptx.l"
 TC; ptx_lval.int_value = CTAID_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 132:
 YY_RULE_SETUP
-#line 192 "cuda-sim/ptx.l"
+#line 192 "ptx.l"
 TC; sscanf(yytext+7,"%u",&ptx_lval.int_value); ptx_lval.int_value<<=16; ptx_lval.int_value += ENVREG_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 133:
 YY_RULE_SETUP
-#line 193 "cuda-sim/ptx.l"
+#line 193 "ptx.l"
 TC; ptx_lval.int_value = GRIDID_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 134:
 YY_RULE_SETUP
-#line 194 "cuda-sim/ptx.l"
+#line 194 "ptx.l"
 TC; ptx_lval.int_value = LANEID_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 135:
 YY_RULE_SETUP
-#line 195 "cuda-sim/ptx.l"
+#line 195 "ptx.l"
 TC; ptx_lval.int_value = LANEMASK_EQ_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 136:
 YY_RULE_SETUP
-#line 196 "cuda-sim/ptx.l"
+#line 196 "ptx.l"
 TC; ptx_lval.int_value = LANEMASK_LE_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 137:
 YY_RULE_SETUP
-#line 197 "cuda-sim/ptx.l"
+#line 197 "ptx.l"
 TC; ptx_lval.int_value = LANEMASK_LT_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 138:
 YY_RULE_SETUP
-#line 198 "cuda-sim/ptx.l"
+#line 198 "ptx.l"
 TC; ptx_lval.int_value = LANEMASK_GE_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 139:
 YY_RULE_SETUP
-#line 199 "cuda-sim/ptx.l"
+#line 199 "ptx.l"
 TC; ptx_lval.int_value = LANEMASK_GT_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 140:
 YY_RULE_SETUP
-#line 200 "cuda-sim/ptx.l"
+#line 200 "ptx.l"
 TC; ptx_lval.int_value = NCTAID_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 141:
 YY_RULE_SETUP
-#line 201 "cuda-sim/ptx.l"
+#line 201 "ptx.l"
 TC; ptx_lval.int_value = NTID_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 142:
 YY_RULE_SETUP
-#line 202 "cuda-sim/ptx.l"
+#line 202 "ptx.l"
 TC; ptx_lval.int_value = NSMID_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 143:
 YY_RULE_SETUP
-#line 203 "cuda-sim/ptx.l"
+#line 203 "ptx.l"
 TC; ptx_lval.int_value = NWARPID_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 144:
 YY_RULE_SETUP
-#line 204 "cuda-sim/ptx.l"
+#line 204 "ptx.l"
 TC; sscanf(yytext+3,"%u",&ptx_lval.int_value); ptx_lval.int_value<<=16; ptx_lval.int_value += PM_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 145:
 YY_RULE_SETUP
-#line 205 "cuda-sim/ptx.l"
+#line 205 "ptx.l"
 TC; ptx_lval.int_value = SMID_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 146:
 YY_RULE_SETUP
-#line 206 "cuda-sim/ptx.l"
+#line 206 "ptx.l"
 TC; ptx_lval.int_value = TID_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 147:
 YY_RULE_SETUP
-#line 207 "cuda-sim/ptx.l"
+#line 207 "ptx.l"
 TC; ptx_lval.int_value = WARPID_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 148:
 YY_RULE_SETUP
-#line 208 "cuda-sim/ptx.l"
+#line 208 "ptx.l"
 TC; ptx_lval.int_value = WARPSZ_REG; return SPECIAL_REGISTER;
 	YY_BREAK
 case 149:
 YY_RULE_SETUP
-#line 210 "cuda-sim/ptx.l"
+#line 210 "ptx.l"
 TC; ptx_lval.string_value = strdup(yytext); return IDENTIFIER;
 	YY_BREAK
 case 150:
 YY_RULE_SETUP
-#line 211 "cuda-sim/ptx.l"
+#line 211 "ptx.l"
 TC; ptx_lval.string_value = strdup(yytext); return IDENTIFIER;
 	YY_BREAK
 case 151:
 YY_RULE_SETUP
-#line 213 "cuda-sim/ptx.l"
+#line 213 "ptx.l"
 TC; sscanf(yytext,"%lf", &ptx_lval.double_value); return DOUBLE_OPERAND;
 	YY_BREAK
 case 152:
 YY_RULE_SETUP
-#line 215 "cuda-sim/ptx.l"
+#line 215 "ptx.l"
 TC; CHECK_UNSIGNED; sscanf(yytext,"%x", &ptx_lval.int_value); return INT_OPERAND;
 	YY_BREAK
 case 153:
 YY_RULE_SETUP
-#line 216 "cuda-sim/ptx.l"
+#line 216 "ptx.l"
 TC; printf("GPGPU-Sim: ERROR ** parsing octal not (yet) implemented\n"); abort(); return INT_OPERAND;
 	YY_BREAK
 case 154:
 YY_RULE_SETUP
-#line 217 "cuda-sim/ptx.l"
+#line 217 "ptx.l"
 TC; printf("GPGPU-Sim: ERROR ** parsing binary not (yet) implemented\n"); abort(); return INT_OPERAND;
 	YY_BREAK
 case 155:
 YY_RULE_SETUP
-#line 218 "cuda-sim/ptx.l"
+#line 218 "ptx.l"
 TC; CHECK_UNSIGNED; ptx_lval.int_value =  atoi(yytext); return INT_OPERAND;
 	YY_BREAK
 case 156:
 YY_RULE_SETUP
-#line 220 "cuda-sim/ptx.l"
+#line 220 "ptx.l"
 TC; sscanf(yytext+2,"%x", (unsigned*)(void*)&ptx_lval.float_value); return FLOAT_OPERAND;
 	YY_BREAK
 case 157:
 YY_RULE_SETUP
-#line 221 "cuda-sim/ptx.l"
+#line 221 "ptx.l"
 TC; sscanf(yytext+2,"%Lx", (unsigned long long*)(void*)&ptx_lval.double_value); return DOUBLE_OPERAND;
 	YY_BREAK
 case 158:
 YY_RULE_SETUP
-#line 223 "cuda-sim/ptx.l"
+#line 223 "ptx.l"
 TC;  return S8_TYPE;
 	YY_BREAK
 case 159:
 YY_RULE_SETUP
-#line 224 "cuda-sim/ptx.l"
+#line 224 "ptx.l"
 TC;  return S16_TYPE;
 	YY_BREAK
 case 160:
 YY_RULE_SETUP
-#line 225 "cuda-sim/ptx.l"
+#line 225 "ptx.l"
 TC;  return S32_TYPE;
 	YY_BREAK
 case 161:
 YY_RULE_SETUP
-#line 226 "cuda-sim/ptx.l"
+#line 226 "ptx.l"
 TC;  return S64_TYPE;
 	YY_BREAK
 case 162:
 YY_RULE_SETUP
-#line 227 "cuda-sim/ptx.l"
+#line 227 "ptx.l"
 TC;  return U8_TYPE;
 	YY_BREAK
 case 163:
 YY_RULE_SETUP
-#line 228 "cuda-sim/ptx.l"
+#line 228 "ptx.l"
 TC;  return U16_TYPE;
 	YY_BREAK
 case 164:
 YY_RULE_SETUP
-#line 229 "cuda-sim/ptx.l"
+#line 229 "ptx.l"
 TC;  return U32_TYPE;
 	YY_BREAK
 case 165:
 YY_RULE_SETUP
-#line 230 "cuda-sim/ptx.l"
+#line 230 "ptx.l"
 TC;  return U64_TYPE;
 	YY_BREAK
 case 166:
 YY_RULE_SETUP
-#line 231 "cuda-sim/ptx.l"
+#line 231 "ptx.l"
 TC;  return F16_TYPE;
 	YY_BREAK
 case 167:
 YY_RULE_SETUP
-#line 232 "cuda-sim/ptx.l"
+#line 232 "ptx.l"
 TC;  return F32_TYPE;
 	YY_BREAK
 case 168:
 YY_RULE_SETUP
-#line 233 "cuda-sim/ptx.l"
+#line 233 "ptx.l"
 TC;  return F64_TYPE;
 	YY_BREAK
 case 169:
 YY_RULE_SETUP
-#line 234 "cuda-sim/ptx.l"
+#line 234 "ptx.l"
 TC;  return FF64_TYPE;
 	YY_BREAK
 case 170:
 YY_RULE_SETUP
-#line 235 "cuda-sim/ptx.l"
+#line 235 "ptx.l"
 TC;  return B8_TYPE;
 	YY_BREAK
 case 171:
 YY_RULE_SETUP
-#line 236 "cuda-sim/ptx.l"
+#line 236 "ptx.l"
 TC;  return B16_TYPE;
 	YY_BREAK
 case 172:
 YY_RULE_SETUP
-#line 237 "cuda-sim/ptx.l"
+#line 237 "ptx.l"
 TC;  return B32_TYPE;
 	YY_BREAK
 case 173:
 YY_RULE_SETUP
-#line 238 "cuda-sim/ptx.l"
+#line 238 "ptx.l"
 TC;  return B64_TYPE;
 	YY_BREAK
 case 174:
 YY_RULE_SETUP
-#line 239 "cuda-sim/ptx.l"
+#line 239 "ptx.l"
 TC;  return BB64_TYPE;
 	YY_BREAK
 case 175:
 YY_RULE_SETUP
-#line 240 "cuda-sim/ptx.l"
+#line 240 "ptx.l"
 TC;  return BB128_TYPE;
 	YY_BREAK
 case 176:
 YY_RULE_SETUP
-#line 241 "cuda-sim/ptx.l"
+#line 241 "ptx.l"
 TC;  return PRED_TYPE;
 	YY_BREAK
 case 177:
 YY_RULE_SETUP
-#line 243 "cuda-sim/ptx.l"
+#line 243 "ptx.l"
 TC; BEGIN(NOT_OPCODE); return TEXREF_TYPE;
 	YY_BREAK
 case 178:
 YY_RULE_SETUP
-#line 244 "cuda-sim/ptx.l"
+#line 244 "ptx.l"
 TC;  return SAMPLERREF_TYPE;
 	YY_BREAK
 case 179:
 YY_RULE_SETUP
-#line 245 "cuda-sim/ptx.l"
+#line 245 "ptx.l"
 TC;  return SURFREF_TYPE;
 	YY_BREAK
 case 180:
 YY_RULE_SETUP
-#line 247 "cuda-sim/ptx.l"
+#line 247 "ptx.l"
 TC; return V2_TYPE;
 	YY_BREAK
 case 181:
 YY_RULE_SETUP
-#line 248 "cuda-sim/ptx.l"
+#line 248 "ptx.l"
 TC; return V3_TYPE;
 	YY_BREAK
 case 182:
 YY_RULE_SETUP
-#line 249 "cuda-sim/ptx.l"
+#line 249 "ptx.l"
 TC; return V4_TYPE;
 	YY_BREAK
 case 183:
 YY_RULE_SETUP
-#line 251 "cuda-sim/ptx.l"
+#line 251 "ptx.l"
 TC; return HALF_OPTION; /* ptxplus */
 	YY_BREAK
 case 184:
 YY_RULE_SETUP
-#line 253 "cuda-sim/ptx.l"
+#line 253 "ptx.l"
 TC; return EQU_OPTION;
 	YY_BREAK
 case 185:
 YY_RULE_SETUP
-#line 254 "cuda-sim/ptx.l"
+#line 254 "ptx.l"
 TC; return NEU_OPTION;
 	YY_BREAK
 case 186:
 YY_RULE_SETUP
-#line 255 "cuda-sim/ptx.l"
+#line 255 "ptx.l"
 TC; return LTU_OPTION;
 	YY_BREAK
 case 187:
 YY_RULE_SETUP
-#line 256 "cuda-sim/ptx.l"
+#line 256 "ptx.l"
 TC; return LEU_OPTION;
 	YY_BREAK
 case 188:
 YY_RULE_SETUP
-#line 257 "cuda-sim/ptx.l"
+#line 257 "ptx.l"
 TC; return GTU_OPTION;
 	YY_BREAK
 case 189:
 YY_RULE_SETUP
-#line 258 "cuda-sim/ptx.l"
+#line 258 "ptx.l"
 TC; return GEU_OPTION;
 	YY_BREAK
 case 190:
 YY_RULE_SETUP
-#line 259 "cuda-sim/ptx.l"
+#line 259 "ptx.l"
 TC; return NUM_OPTION;
 	YY_BREAK
 case 191:
 YY_RULE_SETUP
-#line 260 "cuda-sim/ptx.l"
+#line 260 "ptx.l"
 TC; return NAN_OPTION;
 	YY_BREAK
 case 192:
 YY_RULE_SETUP
-#line 262 "cuda-sim/ptx.l"
+#line 262 "ptx.l"
 TC; return SAT_OPTION;
 	YY_BREAK
 case 193:
 YY_RULE_SETUP
-#line 264 "cuda-sim/ptx.l"
+#line 264 "ptx.l"
 TC; return EQ_OPTION;
 	YY_BREAK
 case 194:
 YY_RULE_SETUP
-#line 265 "cuda-sim/ptx.l"
+#line 265 "ptx.l"
 TC; return NE_OPTION;
 	YY_BREAK
 case 195:
 YY_RULE_SETUP
-#line 266 "cuda-sim/ptx.l"
+#line 266 "ptx.l"
 TC; return LT_OPTION;
 	YY_BREAK
 case 196:
 YY_RULE_SETUP
-#line 267 "cuda-sim/ptx.l"
+#line 267 "ptx.l"
 TC; return LE_OPTION;
 	YY_BREAK
 case 197:
 YY_RULE_SETUP
-#line 268 "cuda-sim/ptx.l"
+#line 268 "ptx.l"
 TC; return GT_OPTION;
 	YY_BREAK
 case 198:
 YY_RULE_SETUP
-#line 269 "cuda-sim/ptx.l"
+#line 269 "ptx.l"
 TC; return GE_OPTION;
 	YY_BREAK
 case 199:
 YY_RULE_SETUP
-#line 270 "cuda-sim/ptx.l"
+#line 270 "ptx.l"
 TC; return CF_OPTION;
 	YY_BREAK
 case 200:
 YY_RULE_SETUP
-#line 271 "cuda-sim/ptx.l"
+#line 271 "ptx.l"
 TC; return SF_OPTION;
 	YY_BREAK
 case 201:
 YY_RULE_SETUP
-#line 272 "cuda-sim/ptx.l"
+#line 272 "ptx.l"
 TC; return NSF_OPTION;
 	YY_BREAK
 case 202:
 YY_RULE_SETUP
-#line 274 "cuda-sim/ptx.l"
+#line 274 "ptx.l"
 TC; return LO_OPTION;
 	YY_BREAK
 case 203:
 YY_RULE_SETUP
-#line 275 "cuda-sim/ptx.l"
+#line 275 "ptx.l"
 TC; return LS_OPTION;
 	YY_BREAK
 case 204:
 YY_RULE_SETUP
-#line 276 "cuda-sim/ptx.l"
+#line 276 "ptx.l"
 TC; return HI_OPTION;
 	YY_BREAK
 case 205:
 YY_RULE_SETUP
-#line 277 "cuda-sim/ptx.l"
+#line 277 "ptx.l"
 TC; return HS_OPTION;
 	YY_BREAK
 case 206:
 YY_RULE_SETUP
-#line 280 "cuda-sim/ptx.l"
+#line 280 "ptx.l"
 TC; return RNI_OPTION;
 	YY_BREAK
 case 207:
 YY_RULE_SETUP
-#line 281 "cuda-sim/ptx.l"
+#line 281 "ptx.l"
 TC; return RZI_OPTION;
 	YY_BREAK
 case 208:
 YY_RULE_SETUP
-#line 282 "cuda-sim/ptx.l"
+#line 282 "ptx.l"
 TC; return RMI_OPTION;
 	YY_BREAK
 case 209:
 YY_RULE_SETUP
-#line 283 "cuda-sim/ptx.l"
+#line 283 "ptx.l"
 TC; return RPI_OPTION;
 	YY_BREAK
 case 210:
 YY_RULE_SETUP
-#line 285 "cuda-sim/ptx.l"
+#line 285 "ptx.l"
 TC; return RN_OPTION;
 	YY_BREAK
 case 211:
 YY_RULE_SETUP
-#line 286 "cuda-sim/ptx.l"
+#line 286 "ptx.l"
 TC; return RZ_OPTION;
 	YY_BREAK
 case 212:
 YY_RULE_SETUP
-#line 287 "cuda-sim/ptx.l"
+#line 287 "ptx.l"
 TC; return RM_OPTION;
 	YY_BREAK
 case 213:
 YY_RULE_SETUP
-#line 288 "cuda-sim/ptx.l"
+#line 288 "ptx.l"
 TC; return RP_OPTION;
 	YY_BREAK
 case 214:
 YY_RULE_SETUP
-#line 290 "cuda-sim/ptx.l"
+#line 290 "ptx.l"
 TC; return FTZ_OPTION;
 	YY_BREAK
 case 215:
 YY_RULE_SETUP
-#line 292 "cuda-sim/ptx.l"
+#line 292 "ptx.l"
 TC; return NEG_OPTION;
 	YY_BREAK
 case 216:
 YY_RULE_SETUP
-#line 294 "cuda-sim/ptx.l"
+#line 294 "ptx.l"
 TC; return WIDE_OPTION;
 	YY_BREAK
 case 217:
 YY_RULE_SETUP
-#line 295 "cuda-sim/ptx.l"
+#line 295 "ptx.l"
 TC; return UNI_OPTION;
 	YY_BREAK
 case 218:
 YY_RULE_SETUP
-#line 297 "cuda-sim/ptx.l"
+#line 297 "ptx.l"
 TC; return SYNC_OPTION;
 	YY_BREAK
 case 219:
 YY_RULE_SETUP
-#line 298 "cuda-sim/ptx.l"
+#line 298 "ptx.l"
 TC; return ARRIVE_OPTION;
 	YY_BREAK
 case 220:
 YY_RULE_SETUP
-#line 299 "cuda-sim/ptx.l"
+#line 299 "ptx.l"
 TC; return RED_OPTION;
 	YY_BREAK
 case 221:
 YY_RULE_SETUP
-#line 302 "cuda-sim/ptx.l"
+#line 302 "ptx.l"
 TC; return APPROX_OPTION;
 	YY_BREAK
 case 222:
 YY_RULE_SETUP
-#line 303 "cuda-sim/ptx.l"
+#line 303 "ptx.l"
 TC; return FULL_OPTION;
 	YY_BREAK
 case 223:
 YY_RULE_SETUP
-#line 305 "cuda-sim/ptx.l"
+#line 305 "ptx.l"
 TC; return ANY_OPTION;
 	YY_BREAK
 case 224:
 YY_RULE_SETUP
-#line 306 "cuda-sim/ptx.l"
+#line 306 "ptx.l"
 TC; return ALL_OPTION;
 	YY_BREAK
 case 225:
 YY_RULE_SETUP
-#line 307 "cuda-sim/ptx.l"
+#line 307 "ptx.l"
 TC; return BALLOT_OPTION;
 	YY_BREAK
 case 226:
 YY_RULE_SETUP
-#line 308 "cuda-sim/ptx.l"
+#line 308 "ptx.l"
 TC; return GLOBAL_OPTION;
 	YY_BREAK
 case 227:
 YY_RULE_SETUP
-#line 309 "cuda-sim/ptx.l"
+#line 309 "ptx.l"
 TC; return CTA_OPTION;
 	YY_BREAK
 case 228:
 YY_RULE_SETUP
-#line 310 "cuda-sim/ptx.l"
+#line 310 "ptx.l"
 TC; return SYS_OPTION;
 	YY_BREAK
 case 229:
 YY_RULE_SETUP
-#line 312 "cuda-sim/ptx.l"
+#line 312 "ptx.l"
 TC; return EXIT_OPTION;
 	YY_BREAK
 case 230:
 YY_RULE_SETUP
-#line 314 "cuda-sim/ptx.l"
+#line 314 "ptx.l"
 TC; return ABS_OPTION;
 	YY_BREAK
 case 231:
 YY_RULE_SETUP
-#line 316 "cuda-sim/ptx.l"
+#line 316 "ptx.l"
 TC; return TO_OPTION;
 	YY_BREAK
 case 232:
 YY_RULE_SETUP
-#line 318 "cuda-sim/ptx.l"
+#line 318 "ptx.l"
 TC; return CA_OPTION;
 	YY_BREAK
 case 233:
 YY_RULE_SETUP
-#line 319 "cuda-sim/ptx.l"
+#line 319 "ptx.l"
 TC; return CG_OPTION;
 	YY_BREAK
 case 234:
 YY_RULE_SETUP
-#line 320 "cuda-sim/ptx.l"
+#line 320 "ptx.l"
 TC; return CS_OPTION;
 	YY_BREAK
 case 235:
 YY_RULE_SETUP
-#line 321 "cuda-sim/ptx.l"
+#line 321 "ptx.l"
 TC; return LU_OPTION;
 	YY_BREAK
 case 236:
 YY_RULE_SETUP
-#line 322 "cuda-sim/ptx.l"
+#line 322 "ptx.l"
 TC; return CV_OPTION;
 	YY_BREAK
 case 237:
 YY_RULE_SETUP
-#line 324 "cuda-sim/ptx.l"
+#line 324 "ptx.l"
 TC; return WB_OPTION;
 	YY_BREAK
 case 238:
 YY_RULE_SETUP
-#line 325 "cuda-sim/ptx.l"
+#line 325 "ptx.l"
 TC; return WT_OPTION;
 	YY_BREAK
 case 239:
 YY_RULE_SETUP
-#line 327 "cuda-sim/ptx.l"
+#line 327 "ptx.l"
 TC; return ATOMIC_POPC;
 	YY_BREAK
 case 240:
 YY_RULE_SETUP
-#line 328 "cuda-sim/ptx.l"
+#line 328 "ptx.l"
 TC; return ATOMIC_AND;
 	YY_BREAK
 case 241:
 YY_RULE_SETUP
-#line 329 "cuda-sim/ptx.l"
+#line 329 "ptx.l"
 TC; return ATOMIC_OR;
 	YY_BREAK
 case 242:
 YY_RULE_SETUP
-#line 330 "cuda-sim/ptx.l"
+#line 330 "ptx.l"
 TC; return ATOMIC_XOR;
 	YY_BREAK
 case 243:
 YY_RULE_SETUP
-#line 331 "cuda-sim/ptx.l"
+#line 331 "ptx.l"
 TC; return ATOMIC_CAS;
 	YY_BREAK
 case 244:
 YY_RULE_SETUP
-#line 332 "cuda-sim/ptx.l"
+#line 332 "ptx.l"
 TC; return ATOMIC_EXCH;
 	YY_BREAK
 case 245:
 YY_RULE_SETUP
-#line 333 "cuda-sim/ptx.l"
+#line 333 "ptx.l"
 TC; return ATOMIC_ADD;
 	YY_BREAK
 case 246:
 YY_RULE_SETUP
-#line 334 "cuda-sim/ptx.l"
+#line 334 "ptx.l"
 TC; return ATOMIC_INC;
 	YY_BREAK
 case 247:
 YY_RULE_SETUP
-#line 335 "cuda-sim/ptx.l"
+#line 335 "ptx.l"
 TC; return ATOMIC_DEC;
 	YY_BREAK
 case 248:
 YY_RULE_SETUP
-#line 336 "cuda-sim/ptx.l"
+#line 336 "ptx.l"
 TC; return ATOMIC_MIN;
 	YY_BREAK
 case 249:
 YY_RULE_SETUP
-#line 337 "cuda-sim/ptx.l"
+#line 337 "ptx.l"
 TC; return ATOMIC_MAX;
 	YY_BREAK
 case 250:
 YY_RULE_SETUP
-#line 341 "cuda-sim/ptx.l"
+#line 341 "ptx.l"
 TC; return GEOM_MODIFIER_1D;
 	YY_BREAK
 case 251:
 YY_RULE_SETUP
-#line 342 "cuda-sim/ptx.l"
+#line 342 "ptx.l"
 TC; return GEOM_MODIFIER_2D;
 	YY_BREAK
 case 252:
 YY_RULE_SETUP
-#line 343 "cuda-sim/ptx.l"
+#line 343 "ptx.l"
 TC; return GEOM_MODIFIER_3D;
 	YY_BREAK
 case 253:
 YY_RULE_SETUP
-#line 345 "cuda-sim/ptx.l"
+#line 345 "ptx.l"
 TC; ptx_lval.int_value = 0; return DIMENSION_MODIFIER;
 	YY_BREAK
 case 254:
 YY_RULE_SETUP
-#line 346 "cuda-sim/ptx.l"
+#line 346 "ptx.l"
 TC; ptx_lval.int_value = 1; return DIMENSION_MODIFIER;
 	YY_BREAK
 case 255:
 YY_RULE_SETUP
-#line 347 "cuda-sim/ptx.l"
+#line 347 "ptx.l"
 TC; ptx_lval.int_value = 2; return DIMENSION_MODIFIER;
 	YY_BREAK
 case 256:
 YY_RULE_SETUP
-#line 348 "cuda-sim/ptx.l"
+#line 348 "ptx.l"
 TC; ptx_lval.int_value = 0; return DIMENSION_MODIFIER;
 	YY_BREAK
 case 257:
 YY_RULE_SETUP
-#line 349 "cuda-sim/ptx.l"
+#line 349 "ptx.l"
 TC; ptx_lval.int_value = 1; return DIMENSION_MODIFIER;
 	YY_BREAK
 case 258:
 YY_RULE_SETUP
-#line 350 "cuda-sim/ptx.l"
+#line 350 "ptx.l"
 TC; ptx_lval.int_value = 2; return DIMENSION_MODIFIER;
 	YY_BREAK
 case 259:
 YY_RULE_SETUP
-#line 352 "cuda-sim/ptx.l"
+#line 352 "ptx.l"
 TC; return MINUS;
 	YY_BREAK
 case 260:
 YY_RULE_SETUP
-#line 353 "cuda-sim/ptx.l"
+#line 353 "ptx.l"
 TC; return PLUS;
 	YY_BREAK
 case 261:
 YY_RULE_SETUP
-#line 354 "cuda-sim/ptx.l"
+#line 354 "ptx.l"
 TC; return COMMA;
 	YY_BREAK
 case 262:
 YY_RULE_SETUP
-#line 355 "cuda-sim/ptx.l"
+#line 355 "ptx.l"
 TC; return PRED;
 	YY_BREAK
 case 263:
 YY_RULE_SETUP
-#line 356 "cuda-sim/ptx.l"
+#line 356 "ptx.l"
 TC; return PIPE;
 	YY_BREAK
 case 264:
 YY_RULE_SETUP
-#line 357 "cuda-sim/ptx.l"
+#line 357 "ptx.l"
 TC; return LEFT_SQUARE_BRACKET;
 	YY_BREAK
 case 265:
 YY_RULE_SETUP
-#line 358 "cuda-sim/ptx.l"
+#line 358 "ptx.l"
 TC; return RIGHT_SQUARE_BRACKET;
 	YY_BREAK
 case 266:
 YY_RULE_SETUP
-#line 359 "cuda-sim/ptx.l"
+#line 359 "ptx.l"
 TC; return LEFT_ANGLE_BRACKET;
 	YY_BREAK
 case 267:
 YY_RULE_SETUP
-#line 360 "cuda-sim/ptx.l"
+#line 360 "ptx.l"
 TC; return RIGHT_ANGLE_BRACKET;
 	YY_BREAK
 case 268:
 YY_RULE_SETUP
-#line 361 "cuda-sim/ptx.l"
+#line 361 "ptx.l"
 TC; return LEFT_PAREN;
 	YY_BREAK
 case 269:
 YY_RULE_SETUP
-#line 362 "cuda-sim/ptx.l"
+#line 362 "ptx.l"
 TC; return RIGHT_PAREN;
 	YY_BREAK
 case 270:
 YY_RULE_SETUP
-#line 363 "cuda-sim/ptx.l"
+#line 363 "ptx.l"
 TC; BEGIN(INITIAL); return COLON;
 	YY_BREAK
 case 271:
 YY_RULE_SETUP
-#line 364 "cuda-sim/ptx.l"
+#line 364 "ptx.l"
 TC; BEGIN(INITIAL); return SEMI_COLON;
 	YY_BREAK
 case 272:
 YY_RULE_SETUP
-#line 365 "cuda-sim/ptx.l"
+#line 365 "ptx.l"
 TC; return EXCLAMATION;
 	YY_BREAK
 case 273:
 YY_RULE_SETUP
-#line 366 "cuda-sim/ptx.l"
+#line 366 "ptx.l"
 TC; return EQUALS;
 	YY_BREAK
 case 274:
 YY_RULE_SETUP
-#line 367 "cuda-sim/ptx.l"
+#line 367 "ptx.l"
 TC; return RIGHT_BRACE;
 	YY_BREAK
 case 275:
 YY_RULE_SETUP
-#line 368 "cuda-sim/ptx.l"
+#line 368 "ptx.l"
 TC; return PERIOD;
 	YY_BREAK
 case 276:
 YY_RULE_SETUP
-#line 369 "cuda-sim/ptx.l"
+#line 369 "ptx.l"
 TC; return BACKSLASH;
 	YY_BREAK
 case 277:
 YY_RULE_SETUP
-#line 371 "cuda-sim/ptx.l"
+#line 371 "ptx.l"
 TC;	// eat single
 	YY_BREAK
 case 278:
 /* rule 278 can match eol */
 YY_RULE_SETUP
-#line 373 "cuda-sim/ptx.l"
+#line 373 "ptx.l"
 col=0; strncpy(linebuf, yytext + 1, 1024); yyless( 1 );
 	YY_BREAK
 case 279:
 YY_RULE_SETUP
-#line 375 "cuda-sim/ptx.l"
+#line 375 "ptx.l"
 TC;
 	YY_BREAK
 case 280:
 YY_RULE_SETUP
-#line 376 "cuda-sim/ptx.l"
+#line 376 "ptx.l"
 TC;
 	YY_BREAK
 
 case 281:
 YY_RULE_SETUP
-#line 381 "cuda-sim/ptx.l"
+#line 381 "ptx.l"
 TC; BEGIN(INITIAL); return LEFT_BRACE; // starting a statement block (allow next token to be parsed as an opcode)
 	YY_BREAK
 case 282:
 YY_RULE_SETUP
-#line 382 "cuda-sim/ptx.l"
+#line 382 "ptx.l"
 TC; return LEFT_BRACE; // starting a vector operand (next token cannot be opcode)
 	YY_BREAK
 
 case 283:
 YY_RULE_SETUP
-#line 385 "cuda-sim/ptx.l"
+#line 385 "ptx.l"
 BEGIN(IN_COMMENT);
 	YY_BREAK
 
 
 case 284:
 YY_RULE_SETUP
-#line 388 "cuda-sim/ptx.l"
+#line 388 "ptx.l"
 BEGIN(INITIAL);
 	YY_BREAK
 case 285:
 YY_RULE_SETUP
-#line 389 "cuda-sim/ptx.l"
+#line 389 "ptx.l"
 // eat comment in chunks
 	YY_BREAK
 case 286:
 YY_RULE_SETUP
-#line 390 "cuda-sim/ptx.l"
+#line 390 "ptx.l"
 // eat the lone star
 	YY_BREAK
 case 287:
 /* rule 287 can match eol */
 YY_RULE_SETUP
-#line 391 "cuda-sim/ptx.l"
+#line 391 "ptx.l"
 TC; 
 	YY_BREAK
 
 
 case 288:
 YY_RULE_SETUP
-#line 395 "cuda-sim/ptx.l"
+#line 395 "ptx.l"
 BEGIN(IN_STRING);
 	YY_BREAK
 
 
 case 289:
 YY_RULE_SETUP
-#line 398 "cuda-sim/ptx.l"
+#line 398 "ptx.l"
 TC; BEGIN(INITIAL); return STRING;
 	YY_BREAK
 case 290:
 /* rule 290 can match eol */
 YY_RULE_SETUP
-#line 399 "cuda-sim/ptx.l"
+#line 399 "ptx.l"
 TC; ptx_lval.string_value = strdup(yytext); 
 	YY_BREAK
 
 case 291:
 /* rule 291 can match eol */
 YY_RULE_SETUP
-#line 402 "cuda-sim/ptx.l"
+#line 402 "ptx.l"
 
 	YY_BREAK
 case 292:
 YY_RULE_SETUP
-#line 404 "cuda-sim/ptx.l"
+#line 404 "ptx.l"
 TC; ptx_error((const char*)NULL);
 	YY_BREAK
 case 293:
 YY_RULE_SETUP
-#line 405 "cuda-sim/ptx.l"
+#line 405 "ptx.l"
 ECHO;
 	YY_BREAK
 #line 3358 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/lex.ptx_.c"
@@ -4334,7 +4334,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 405 "cuda-sim/ptx.l"
+#line 405 "ptx.l"
 
 
 extern int g_error_detected;

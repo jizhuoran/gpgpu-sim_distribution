@@ -135,7 +135,7 @@
 #include "../src/stream_manager.h"
 
 
-#include "cuobjdump_parser.h"
+// #include "cuobjdump_parser.h"
 
 
 #include <pthread.h>
@@ -414,6 +414,8 @@ std::list<kernel_config> g_cuda_launch_stack;
  *                                                                              *
  *                                                                              *
  *******************************************************************************/
+
+extern int cuobjdump_parse();
 
 extern "C" {
 

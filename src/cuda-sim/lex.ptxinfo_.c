@@ -817,7 +817,7 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "cuda-sim/ptxinfo.l"
+#line 1 "ptxinfo.l"
 /*
 Copyright (c) 2009-2011, Tor M. Aamodt
 The University of British Columbia
@@ -846,7 +846,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#line 35 "cuda-sim/ptxinfo.l"
+#line 35 "ptxinfo.l"
 #include "ptxinfo.tab.h"
 #include <string.h>
 
@@ -1075,7 +1075,7 @@ YY_DECL
 		}
 
 	{
-#line 47 "cuda-sim/ptxinfo.l"
+#line 47 "ptxinfo.l"
 
 #line 1081 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/lex.ptxinfo_.c"
 
@@ -1147,133 +1147,133 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 48 "cuda-sim/ptxinfo.l"
+#line 48 "ptxinfo.l"
 
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 49 "cuda-sim/ptxinfo.l"
+#line 49 "ptxinfo.l"
 TC; return WARNING;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 50 "cuda-sim/ptxinfo.l"
+#line 50 "ptxinfo.l"
 TC; 	return HEADER;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 51 "cuda-sim/ptxinfo.l"
+#line 51 "ptxinfo.l"
 TC; 	return INFO;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 52 "cuda-sim/ptxinfo.l"
+#line 52 "ptxinfo.l"
 TC; return FUNC;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 53 "cuda-sim/ptxinfo.l"
+#line 53 "ptxinfo.l"
 TC; return USED;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 54 "cuda-sim/ptxinfo.l"
+#line 54 "ptxinfo.l"
 TC; return REGS;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 55 "cuda-sim/ptxinfo.l"
+#line 55 "ptxinfo.l"
 TC; return BYTES;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 56 "cuda-sim/ptxinfo.l"
+#line 56 "ptxinfo.l"
 TC; return LMEM;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 57 "cuda-sim/ptxinfo.l"
+#line 57 "ptxinfo.l"
 TC; return SMEM;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 58 "cuda-sim/ptxinfo.l"
+#line 58 "ptxinfo.l"
 TC; return CMEM;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 59 "cuda-sim/ptxinfo.l"
+#line 59 "ptxinfo.l"
 TC; return LINE;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 60 "cuda-sim/ptxinfo.l"
+#line 60 "ptxinfo.l"
 TC; return FOR;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 62 "cuda-sim/ptxinfo.l"
+#line 62 "ptxinfo.l"
 TC; ptxinfo_lval.string_value = strdup(yytext); return IDENTIFIER;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 63 "cuda-sim/ptxinfo.l"
+#line 63 "ptxinfo.l"
 TC; ptxinfo_lval.int_value =  atoi(yytext); return INT_OPERAND;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 65 "cuda-sim/ptxinfo.l"
+#line 65 "ptxinfo.l"
 TC; return PLUS;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 66 "cuda-sim/ptxinfo.l"
+#line 66 "ptxinfo.l"
 TC; return COMMA;
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 67 "cuda-sim/ptxinfo.l"
+#line 67 "ptxinfo.l"
 TC; return LEFT_SQUARE_BRACKET;
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 68 "cuda-sim/ptxinfo.l"
+#line 68 "ptxinfo.l"
 TC; return RIGHT_SQUARE_BRACKET;
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 69 "cuda-sim/ptxinfo.l"
+#line 69 "ptxinfo.l"
 TC; return COLON;
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 70 "cuda-sim/ptxinfo.l"
+#line 70 "ptxinfo.l"
 TC; return SEMICOLON;
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 71 "cuda-sim/ptxinfo.l"
+#line 71 "ptxinfo.l"
 TC; return QUOTE;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 72 "cuda-sim/ptxinfo.l"
+#line 72 "ptxinfo.l"
 TC;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 73 "cuda-sim/ptxinfo.l"
+#line 73 "ptxinfo.l"
 TC;
 	YY_BREAK
 case 25:
 /* rule 25 can match eol */
 YY_RULE_SETUP
-#line 75 "cuda-sim/ptxinfo.l"
+#line 75 "ptxinfo.l"
 ptxinfo_col=0; strncpy(ptxinfo_linebuf, yytext + 1, 1024); yyless( 1 );
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 77 "cuda-sim/ptxinfo.l"
+#line 77 "ptxinfo.l"
 ECHO;
 	YY_BREAK
 #line 1280 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/lex.ptxinfo_.c"
@@ -2293,7 +2293,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 77 "cuda-sim/ptxinfo.l"
+#line 77 "ptxinfo.l"
 
 
 extern int g_ptxinfo_error_detected;

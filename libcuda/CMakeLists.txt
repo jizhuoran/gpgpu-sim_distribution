@@ -2,9 +2,4 @@ bison_target(cuobjdump_parser cuobjdump.y ${CMAKE_CURRENT_SOURCE_DIR}/cuobjdump_
 flex_target(cuobjdump_lexer cuobjdump.l ${CMAKE_CURRENT_SOURCE_DIR}/cuobjdump_lexer.c COMPILE_FLAGS "-B -P cuobjdump_")
 ADD_FLEX_BISON_DEPENDENCY(cuobjdump_lexer cuobjdump_parser)
 
-MESSAGE(STATUS "============")
-MESSAGE(STATUS "${BISON_cuobjdump_parser_OUTPUTS}")
-MESSAGE(STATUS "============")
-
-
 add_library(cuda SHARED ${CMAKE_CURRENT_SOURCE_DIR}/cuobjdump_parser.c ${FLEX_cuobjdump_lexer_OUTPUTS})

@@ -135,7 +135,7 @@ extern int ptxinfo_debug;
 
 union YYSTYPE
 {
-#line 30 "cuda-sim/ptxinfo.y" /* yacc.c:355  */
+#line 30 "ptxinfo.y" /* yacc.c:355  */
 
   int    int_value;
   char * string_value;
@@ -156,7 +156,7 @@ int ptxinfo_parse (void);
 #endif /* !YY_PTXINFO_HOME_ZRJI_GPGPU_SIM_DISTRIBUTION_SRC_CUDA_SIM_PTXINFO_TAB_H_INCLUDED  */
 
 /* Copy the second part of user declarations.  */
-#line 57 "cuda-sim/ptxinfo.y" /* yacc.c:358  */
+#line 57 "ptxinfo.y" /* yacc.c:358  */
 
 	#include <stdlib.h>
 	#include <string.h>
@@ -1268,79 +1268,79 @@ yyreduce:
   switch (yyn)
     {
         case 6:
-#line 81 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 81 "ptxinfo.y" /* yacc.c:1646  */
     { printf("GPGPU-Sim: ptxas %s\n", (yyvsp[0].string_value)); }
 #line 1274 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 85 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 85 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_addinfo(); }
 #line 1280 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 88 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 88 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_function((yyvsp[-1].string_value)); }
 #line 1286 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 89 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 89 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_function((yyvsp[-5].string_value)); }
 #line 1292 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 95 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 95 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_regs((yyvsp[-1].int_value)); }
 #line 1298 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 96 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 96 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_lmem(g_declared,g_system); }
 #line 1304 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 97 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 97 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_smem(g_declared,g_system); }
 #line 1310 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 98 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 98 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_cmem((yyvsp[-5].int_value),(yyvsp[-1].int_value)); }
 #line 1316 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 99 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 99 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_lmem((yyvsp[-2].int_value),0); }
 #line 1322 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 100 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 100 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_smem((yyvsp[-2].int_value),0); }
 #line 1328 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 101 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 101 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_cmem((yyvsp[-2].int_value),0); }
 #line 1334 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 102 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 102 "ptxinfo.y" /* yacc.c:1646  */
     { ptxinfo_regs((yyvsp[-1].int_value)); }
 #line 1340 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 105 "cuda-sim/ptxinfo.y" /* yacc.c:1646  */
+#line 105 "ptxinfo.y" /* yacc.c:1646  */
     { g_declared=(yyvsp[-3].int_value); g_system=(yyvsp[-1].int_value); }
 #line 1346 "/home/zrji/gpgpu-sim_distribution/src/cuda-sim/ptxinfo.tab.c" /* yacc.c:1646  */
     break;
@@ -1574,7 +1574,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 107 "cuda-sim/ptxinfo.y" /* yacc.c:1906  */
+#line 107 "ptxinfo.y" /* yacc.c:1906  */
 
 
 

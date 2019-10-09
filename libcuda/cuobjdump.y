@@ -31,12 +31,12 @@
 
 int yylex(void);
 void yyerror(const char*);
-extern void addCuobjdumpSection(int sectiontype);
-void setCuobjdumparch(const char* arch);
-void setCuobjdumpidentifier(const char* identifier);
-void setCuobjdumpptxfilename(const char* filename);
-void setCuobjdumpelffilename(const char* filename);
-void setCuobjdumpsassfilename(const char* filename);
+extern "C" void addCuobjdumpSection(int sectiontype);
+extern "C" void setCuobjdumparch(const char* arch);
+extern "C" void setCuobjdumpidentifier(const char* identifier);
+extern "C" void setCuobjdumpptxfilename(const char* filename);
+extern "C" void setCuobjdumpelffilename(const char* filename);
+extern "C" void setCuobjdumpsassfilename(const char* filename);
 int elfserial = 1;
 int ptxserial = 1;
 FILE *ptxfile;

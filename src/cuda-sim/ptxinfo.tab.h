@@ -74,7 +74,7 @@ extern int ptxinfo_debug;
 
 union YYSTYPE
 {
-#line 30 "cuda-sim/ptxinfo.y" /* yacc.c:1909  */
+#line 30 "ptxinfo.y" /* yacc.c:1909  */
 
   int    int_value;
   char * string_value;

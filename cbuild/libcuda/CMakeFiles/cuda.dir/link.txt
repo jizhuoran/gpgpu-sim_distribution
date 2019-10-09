@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC -O3 -std=c++11 -fPIC  -shared -Wl,-soname,libcuda.so -o libcuda.so CMakeFiles/cuda.dir/cuobjdump_parser.c.o CMakeFiles/cuda.dir/cuobjdump_lexer.c.o 
