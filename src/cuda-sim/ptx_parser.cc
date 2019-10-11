@@ -30,6 +30,11 @@
 #include "ptx.tab.h"
 #include <stdarg.h>
 
+#include <iostream>
+
+#define BOOST_STACKTRACE_USE_ADDR2LINE
+#include <boost/stacktrace.hpp>
+
 extern int ptx_error( const char *s );
 extern int ptx_lineno;
 
@@ -77,7 +82,7 @@ std::list<int> g_scalar_type;
 #define PTX_PARSE_DPRINTF(...) \
    if( g_debug_ir_generation ) { \
       printf(" %s:%u => ",g_filename,ptx_lineno); \
-      printf("   (%s:%u) ", __FILE__, __LINE__); \
+      printf("   (%s:%u) ", "ptx_parser.cc", __LINE__); \
       printf(__VA_ARGS__); \
       printf("\n"); \
       fflush(stdout); \
@@ -198,6 +203,9 @@ void add_directive()
 void end_function() 
 {
    PTX_PARSE_DPRINTF("end_function");
+
+
+   std::cerr << "SJ: " << boost::stacktrace::stacktrace();
 
    init_directive_state();
    init_instruction_state();

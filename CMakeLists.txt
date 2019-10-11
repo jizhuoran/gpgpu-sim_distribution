@@ -35,6 +35,13 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src)
 add_library(cudart SHARED ${CMAKE_CURRENT_SOURCE_DIR}/libcuda/cuda_runtime_api.cc)
 target_link_libraries(cudart cuda gpgpu-sim gpgpu-sim_uarch cuda-sim intersim2 Threads::Threads)
 
+find_package(Boost)
+if(Boost_FOUND)
+	include_directories(${Boost_INCLUDE_DIRS})
+    target_link_libraries(cudart ${Boost_LIBRARIES} ${CMAKE_DL_LIBS})
+endif()
+
+
 ADD_CUSTOM_TARGET( 
 	cudartv4 ALL  
 	COMMAND ${CMAKE_COMMAND} -E create_symlink ${CMAKE_BINARY_DIR}/libcudart.so ${CMAKE_BINARY_DIR}/libcudart.so.4)

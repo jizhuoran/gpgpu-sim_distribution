@@ -25,10 +25,13 @@
 // OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// #include <iostream>
+
 
 #ifndef ABSTRACT_HARDWARE_MODEL_INCLUDED
 #define ABSTRACT_HARDWARE_MODEL_INCLUDED
+
+#include "dao-sim/magic_num.hpp"
+#include "dao-sim/reg.hpp"
 
 // Forward declarations
 class gpgpu_sim;
@@ -1058,6 +1061,9 @@ class core_t {
         void or_reduction(unsigned ctaid, unsigned barid, bool value) { reduction_storage[ctaid][barid] |= value; }
         void popc_reduction(unsigned ctaid, unsigned barid, bool value) { reduction_storage[ctaid][barid] += value;}
         unsigned get_reduction_value(unsigned ctaid, unsigned barid) {return reduction_storage[ctaid][barid];}
+
+        dao_sim::reg registers[REG_NUM];
+
     protected:
         class gpgpu_sim *m_gpu;
         kernel_info_t *m_kernel;

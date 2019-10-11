@@ -60,20 +60,42 @@ void sign_extend( ptx_reg_t &data, unsigned src_size, const operand_info &dst );
 void ptx_thread_info::set_reg( const symbol *reg, const ptx_reg_t &value ) 
 {
    assert( reg != NULL );
-   if( reg->name() == "_" ) return;
+   if( reg->name() == "_" ) {
+    std::cerr << "SJ: the reg name is " << reg->name() << std::endl;
+    return;
+   } 
    assert( !m_regs.empty() );
    assert( reg->uid() > 0 );
-   m_regs.back()[ reg ] = value;
-   if (m_enable_debug_trace ) 
-      m_debug_trace_regs_modified.back()[ reg ] = value;
-   m_last_set_operand_value = value;
+
+  m_core->registers[get_reg_offset() + reg->reg_num()].set(value);
+
+  m_regs.back()[ reg ] = value;
+  if (m_enable_debug_trace ) 
+    m_debug_trace_regs_modified.back()[ reg ] = value;
+  m_last_set_operand_value = value;
 }
 
 ptx_reg_t ptx_thread_info::get_reg( const symbol *reg )
 {
+
+  std::cerr << "SJ: the reg num is " << reg->reg_num() << "our: " << std::endl;
+
+            // std::cerr << "SJ: the value is " << thread->get_reg_offset() + op.get_symbol()->reg_num() << ":" << thread->get_core()->registers[thread->get_reg_offset() + op.get_symbol()->reg_num()].value << std::endl;
+
    static bool unfound_register_warned = false;
    assert( reg != NULL );
    assert( !m_regs.empty() );
+
+
+  if (this->get_core()->registers[this->get_reg_offset() + reg->reg_num()].status == 0) {
+    std::cout << "SJ: You access undefined register" << std::endl;
+  }
+
+  if (m_enable_debug_trace ) 
+      m_debug_trace_regs_read.back()[ reg ] = this->get_core()->registers[this->get_reg_offset() + reg->reg_num()].value;
+  return this->get_core()->registers[this->get_reg_offset() + reg->reg_num()].value;
+
+
    reg_map_t::iterator regs_iter = m_regs.back().find(reg);
    if (regs_iter == m_regs.back().end()) {
       assert( reg->type()->get_key().is_reg() );
@@ -377,6 +399,7 @@ void ptx_thread_info::set_operand_value( const operand_info &dst, const ptx_reg_
         predValue.u64 |= ((carry & 0x01)<<2);
 
         set_reg(sym,predValue);
+
     }
     else if (dst.get_double_operand_type() == 0)
     {
@@ -402,6 +425,7 @@ void ptx_thread_info::set_operand_value( const operand_info &dst, const ptx_reg_
    /*complete this section for other cases*/
    if(dst.get_addr_space() == undefined_space)
    {
+
       ptx_reg_t setValue;
       setValue.u64 = data.u64;
 
@@ -554,6 +578,7 @@ void ptx_thread_info::set_operand_value( const operand_info &dst, const ptx_reg_
       }
       else
       {
+
           if(dst.get_operand_lohi() == 1)
           {
               setValue.u64 = ((m_regs.back()[ dst.get_symbol() ].u64) & (~(0xFFFF))) + (data.u64 & 0xFFFF);
@@ -563,6 +588,7 @@ void ptx_thread_info::set_operand_value( const operand_info &dst, const ptx_reg_
               setValue.u64 = ((m_regs.back()[ dst.get_symbol() ].u64) & (~(0xFFFF0000))) + ((data.u64<<16) & 0xFFFF0000);
           }
           set_reg(dst.get_symbol(),setValue);
+
       }
    }
 
@@ -813,6 +839,9 @@ void add_impl( const ptx_instruction *pI, ptx_thread_info *thread )
    fesetround( orig_rm );
 
    thread->set_operand_value(dst, data, i_type, thread, pI, overflow, carry  );
+  
+  std::cerr << "SJ: come to here" << dst.get_symbol()->reg_num() << std::endl;
+
 }
 
 void addc_impl( const ptx_instruction *pI, ptx_thread_info *thread ) { inst_not_implemented(pI); }

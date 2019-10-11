@@ -1334,13 +1334,6 @@ void extract_code_using_cuobjdump(){
 	if (parse_output) {
 		printf("Parsing file %s\n", fname);
 		cuobjdump_in = fopen(fname, "r");
-
-		printf("SJ: ?????? Parsing file %s\n", fname);
-
-#ifdef yyparse
-		printf("SJ: aaaaa aaaaa !\n");
-
-#endif
 		cuobjdump_parse();
 		fclose(cuobjdump_in);
 		printf("Done parsing!!!\n");

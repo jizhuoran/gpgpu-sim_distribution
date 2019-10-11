@@ -1425,7 +1425,12 @@ unsigned ptx_sim_init_thread( kernel_info_t &kernel,
       *thread_info = NULL;
    }
 
+   std::cerr << "SJ: come to this, ptx_sim_init_thread" << std::endl;
+
    if ( !active_threads.empty() ) {
+
+      std::cerr << "SJ: come to this, !active_threads.empty()" << std::endl;
+
       assert( active_threads.size() <= threads_left );
       ptx_thread_info *thd = active_threads.front(); 
       active_threads.pop_front();
@@ -1502,6 +1507,9 @@ unsigned ptx_sim_init_thread( kernel_info_t &kernel,
       thd->set_ntid(kernel.get_cta_dim());
       thd->set_ctaid(ctaid3d);
       thd->set_tid(tid3d);
+      thd->set_reg_offset(kernel.entry()->get_kernel_info()->regs * new_tid);
+      thd->set_reg_size(kernel.entry()->get_kernel_info()->regs);
+
       if( kernel.entry()->get_ptx_version().extensions() ) 
          thd->cpy_tid_to_reg(tid3d);
       thd->set_valid();

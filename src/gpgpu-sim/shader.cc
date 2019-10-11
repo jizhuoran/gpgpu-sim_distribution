@@ -570,7 +570,7 @@ void shader_core_ctx::decode()
         // decode 1 or 2 instructions and place them into ibuffer
         address_type pc = m_inst_fetch_buffer.m_pc;
 
-        // std::cerr << "SJ: the pc is " << pc << std::endl;
+        std::cerr << "SJ: the pc is " << pc << std::endl;
 
         const warp_inst_t* pI1 = ptx_fetch_inst(pc);
         m_warp[m_inst_fetch_buffer.m_warp_id].ibuffer_fill(0,pI1);
@@ -2385,7 +2385,6 @@ void shader_core_ctx::display_pipeline(FILE *fout, int print_mem, int mask ) con
    }
 
 }
-
 unsigned int shader_core_config::max_cta( const kernel_info_t &k ) const
 {
    unsigned threads_per_cta  = k.threads_per_cta();
@@ -2406,8 +2405,10 @@ unsigned int shader_core_config::max_cta( const kernel_info_t &k ) const
 
    //Limit by register count, rounded up to multiple of 4.
    unsigned int result_regs = (unsigned)-1;
-   if (kernel_info->regs > 0)
+   if (kernel_info->regs > 0) {
+      std::cerr << "SJ: the registers usage is " << kernel_info->regs << std::endl;
       result_regs = gpgpu_shader_registers / (padded_cta_size * ((kernel_info->regs+3)&~3));
+   }
 
    //Limit by CTA
    unsigned int result_cta = max_cta_per_core;
