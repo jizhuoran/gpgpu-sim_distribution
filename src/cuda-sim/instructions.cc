@@ -57,78 +57,23 @@ ptx_reg_t srcOperandModifiers(ptx_reg_t opData, operand_info opInfo, operand_inf
 
 void sign_extend( ptx_reg_t &data, unsigned src_size, const operand_info &dst );
 
-void ptx_thread_info::set_reg( const symbol *reg, const ptx_reg_t &value ) 
-{
-
-   std::cerr << "SJ: setop the name is " << reg->name() << " id is :" << reg->reg_num() << " at " << get_reg_offset() << " and core " << m_core << std::endl;
-
+void ptx_thread_info::set_reg( const symbol *reg, const ptx_reg_t &value) {
    assert( reg != NULL );
-   if( reg->name() == "_" ) {
-    std::cerr << "SJ: the reg name is " << reg->name() << std::endl;
-    return;
-   } 
-   // assert( !m_regs.empty() );
    assert( reg->uid() > 0 );
+   m_core->set_reg(this, reg, value);
 
-  m_core->registers[get_reg_offset() + reg->reg_num()].set(value);
-
-//   m_regs.back()[ reg ] = value;
-  if (m_enable_debug_trace ) 
-    m_debug_trace_regs_modified.back()[ reg ] = value;
-  m_last_set_operand_value = value;
-
-   // std::cerr << "SJ: the current size is " << m_regs.back().size() << std::endl;
-
+   if (m_enable_debug_trace) 
+      m_debug_trace_regs_modified.back()[ reg ] = value;
+   m_last_set_operand_value = value;
 }
 
-ptx_reg_t ptx_thread_info::get_reg( const symbol *reg )
-{
-   std::cerr << "SJ: getop the name is " << reg->name() << " id is :" << reg->reg_num() << " at " << get_reg_offset() << " and core " << m_core << std::endl;
-
-   static bool unfound_register_warned = false;
+ptx_reg_t ptx_thread_info::get_reg( const symbol *reg ) {
    assert( reg != NULL );
+   auto value = m_core->get_reg(this, reg);
 
-  if (!m_core->registers[get_reg_offset() + reg->reg_num()].is_inited()) {
-      assert( reg->type()->get_key().is_reg() );
-      const std::string &name = reg->name();
-      unsigned call_uid = m_callstack.back().m_call_uid;
-      ptx_reg_t uninit_reg;
-      uninit_reg.u32 = 0x0;
-      set_reg(reg, uninit_reg); // give it a value since we are going to warn the user anyway
-      std::string file_loc = get_location();
-      if( !unfound_register_warned ) {
-          printf("GPGPU-Sim PTX: WARNING (%s) ** reading undefined register \'%s\' (cuid:%u). Setting to 0X00000000. This is okay if you are simulating the native ISA"
-              "\n",
-                 file_loc.c_str(), name.c_str(), call_uid );
-          unfound_register_warned = true;
-      }
-  }
-
-  if (m_enable_debug_trace ) 
-      m_debug_trace_regs_read.back()[ reg ] = m_core->registers[get_reg_offset() + reg->reg_num()].value;
-  return m_core->registers[get_reg_offset() + reg->reg_num()].value;
-
-
-   // reg_map_t::iterator regs_iter = m_regs.back().find(reg);
-   // if (regs_iter == m_regs.back().end()) {
-   //    assert( reg->type()->get_key().is_reg() );
-   //    const std::string &name = reg->name();
-   //    unsigned call_uid = m_callstack.back().m_call_uid;
-   //    ptx_reg_t uninit_reg;
-   //    uninit_reg.u32 = 0x0;
-   //    set_reg(reg, uninit_reg); // give it a value since we are going to warn the user anyway
-   //    std::string file_loc = get_location();
-   //    if( !unfound_register_warned ) {
-   //        printf("GPGPU-Sim PTX: WARNING (%s) ** reading undefined register \'%s\' (cuid:%u). Setting to 0X00000000. This is okay if you are simulating the native ISA"
-   //      		  "\n",
-   //               file_loc.c_str(), name.c_str(), call_uid );
-   //        unfound_register_warned = true;
-   //    }
-   //    regs_iter = m_regs.back().find(reg);
-   // }
-   // if (m_enable_debug_trace ) 
-   //    m_debug_trace_regs_read.back()[ reg ] = regs_iter->second;
-   // return regs_iter->second;
+   if (m_enable_debug_trace ) 
+      m_debug_trace_regs_read.back()[ reg ] = value;
+   return value;
 }
 
 ptx_reg_t ptx_thread_info::get_operand_value( const operand_info &op, operand_info dstInfo, unsigned opType, ptx_thread_info *thread, int derefFlag )
@@ -373,7 +318,7 @@ void ptx_thread_info::get_vector_operand_values( const operand_info &op, ptx_reg
          // assert( reg_iter != m_regs.back().end() );
          // ptx_regs[idx] = reg_iter->second;
 
-        ptx_regs[idx] = m_core->registers[get_reg_offset() + sym->reg_num()].value;
+        ptx_regs[idx] = m_core->get_reg(this, sym);
 
       }
    }
@@ -412,7 +357,7 @@ void ptx_thread_info::set_operand_value( const operand_info &dst, const ptx_reg_
         std::cerr << "SJ: come to here: get_double_operand_type -2" << std::endl;
 
         const symbol *sym = dst.vec_symbol(0);
-        predValue.u64 = (m_core->registers[get_reg_offset() + sym->reg_num()].value.u64) & ~(0x0C);
+        predValue.u64 = (m_core->get_reg(this, sym).u64) & ~(0x0C);
         predValue.u64 |= ((overflow & 0x01)<<3);
         predValue.u64 |= ((carry & 0x01)<<2);
 
@@ -542,13 +487,13 @@ void ptx_thread_info::set_operand_value( const operand_info &dst, const ptx_reg_
           if(dst.get_operand_lohi() == 1)
           {
             std::cerr << "SJ: come to here: get_operand_lo" << std::endl;
-            setValue.u64 = ((m_core->registers[get_reg_offset() + regName->reg_num()].value.u64) & (~(0xFFFF))) + ((data.u64) & 0xFFFF);
+            setValue.u64 = (m_core->get_reg(this, regName).u64 & (~(0xFFFF))) + ((data.u64) & 0xFFFF);
             // setValue.u64 = ((m_regs.back()[ regName ].u64) & (~(0xFFFF))) + (data.u64 & 0xFFFF);
           }
           else if(dst.get_operand_lohi() == 2)
           {
             std::cerr << "SJ: come to here: get_operand_hi" << std::endl;
-            setValue.u64 = ((m_core->registers[get_reg_offset() + regName->reg_num()].value.u64) & (~(0xFFFF0000))) + ((data.u64<<16) & 0xFFFF0000);
+            setValue.u64 = (m_core->get_reg(this, regName).u64 & (~(0xFFFF0000))) + ((data.u64<<16) & 0xFFFF0000);
             // setValue.u64 = ((m_regs.back()[ regName ].u64) & (~(0xFFFF0000))) + ((data.u64<<16) & 0xFFFF0000);
           }
 
@@ -600,17 +545,16 @@ void ptx_thread_info::set_operand_value( const operand_info &dst, const ptx_reg_
       }
       else
       {
-
           if(dst.get_operand_lohi() == 1)
           {
             std::cerr << "SJ: come to here: get_operand_lo 2" << std::endl;
-            setValue.u64 = ((m_core->registers[get_reg_offset() + dst.reg_num()].value.u64) & (~(0xFFFF))) + ((data.u64) & 0xFFFF);
+            setValue.u64 = (m_core->get_reg(this, dst.get_symbol()).u64 & (~(0xFFFF))) + ((data.u64) & 0xFFFF);
             // setValue.u64 = ((m_regs.back()[ dst.get_symbol() ].u64) & (~(0xFFFF))) + (data.u64 & 0xFFFF);
           }
           else if(dst.get_operand_lohi() == 2)
           {
             std::cerr << "SJ: come to here: get_operand_hi 2" << std::endl;
-            setValue.u64 = ((m_core->registers[get_reg_offset() + dst.reg_num()].value.u64) & (~(0xFFFF0000))) + ((data.u64<<16) & 0xFFFF0000);
+            setValue.u64 = (m_core->get_reg(this, dst.get_symbol()).u64 & (~(0xFFFF0000))) + ((data.u64<<16) & 0xFFFF0000);
             // setValue.u64 = ((m_regs.back()[ dst.get_symbol() ].u64) & (~(0xFFFF0000))) + ((data.u64<<16) & 0xFFFF0000);
           }
           set_reg(dst.get_symbol(),setValue);

@@ -855,3 +855,25 @@ void core_t::get_pdom_stack_top_info( unsigned warpId, unsigned *pc, unsigned *r
 {
     m_simt_stack[warpId]->get_pdom_stack_top_info(pc,rpc);
 }
+
+
+void core_t::set_reg(const ptx_thread_info* thread, const symbol* reg, ptx_reg_t value) {
+    reg_file.set_reg(thread, reg, value);
+}
+
+ptx_reg_t core_t::get_reg(const ptx_thread_info* thread, const symbol* reg) {
+
+    return reg_file.get_reg(thread, reg);    
+
+}
+
+std::vector<ptx_reg_t> core_t::dump_reg_of_thread(const ptx_thread_info* thread) {
+    std::vector<ptx_reg_t> result;
+    for (int i = 0; i < thread->get_reg_size(); ++i) {
+        auto reg = reg_file.get_reg(thread->get_reg_offset() + i);
+        if(reg.is_valid()) {
+            result.push_back(reg.value);
+        }
+    }
+    return result;    
+}

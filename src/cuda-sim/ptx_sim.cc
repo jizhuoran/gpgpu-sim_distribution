@@ -498,30 +498,14 @@ const ptx_instruction *ptx_thread_info::get_inst( addr_t pc ) const
    return m_func_info->get_instruction(pc);
 }
 
-void ptx_thread_info::dump_regs( FILE *fp )
-{
-   // if(m_regs.empty()) return;
-   // if(m_regs.back().empty()) return;
+void ptx_thread_info::dump_regs( FILE *fp ) {
    fprintf(fp,"Register File Contents:\n");
    fflush(fp);
-   reg_map_t::const_iterator r;
    
-   for (int i = 0; i < get_reg_offset(); ++i) {
-      // const symbol *sym = r->first;
-      if (m_core->registers[get_reg_offset() + i].is_inited()) {
-         ptx_reg_t value = m_core->registers[get_reg_offset() + i].value;
-         std::string name = "not implemented yet"; //sym->name();
-         print_reg(fp,name,value,m_symbol_table);
-      }
-      
+   for(auto reg : m_core->dump_reg_of_thread(this)) {
+      print_reg(fp,"not implemented yet",reg,m_symbol_table);
    }
-
-   // for ( r=m_regs.back().begin(); r != m_regs.back().end(); ++r ) {
-   //    const symbol *sym = r->first;
-   //    ptx_reg_t value = r->second;
-   //    std::string name = sym->name();
-   //    print_reg(fp,name,value,m_symbol_table);
-   // }
+ 
 }
 
 void ptx_thread_info::dump_modifiedregs(FILE *fp)

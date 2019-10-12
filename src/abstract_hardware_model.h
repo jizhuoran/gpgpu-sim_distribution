@@ -806,6 +806,7 @@ enum divergence_support_t {
 };
 
 const unsigned MAX_ACCESSES_PER_INSN_PER_THREAD = 8;
+class symbol;
 
 class warp_inst_t: public inst_t {
 public:
@@ -1062,7 +1063,13 @@ class core_t {
         void popc_reduction(unsigned ctaid, unsigned barid, bool value) { reduction_storage[ctaid][barid] += value;}
         unsigned get_reduction_value(unsigned ctaid, unsigned barid) {return reduction_storage[ctaid][barid];}
 
-        dao_sim::reg registers[REG_NUM];
+        void set_reg(const ptx_thread_info* thread, const symbol* reg, ptx_reg_t value);
+        ptx_reg_t get_reg(const ptx_thread_info* thread, const symbol* reg);
+
+        std::vector<ptx_reg_t> dump_reg_of_thread(const ptx_thread_info* thread);
+
+        dao_sim::RegFile reg_file = dao_sim::RegFile(REG_NUM);
+        // dao_sim::Reg registers[REG_NUM];
 
     protected:
         class gpgpu_sim *m_gpu;

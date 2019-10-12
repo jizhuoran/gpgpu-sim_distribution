@@ -1,6 +1,8 @@
 #ifndef DAO_REG
 #define DAO_REG
 
+#include <vector>
+
 union ptx_reg_t {
    ptx_reg_t() {
       bits.ms = 0;
@@ -91,24 +93,60 @@ union ptx_reg_t {
 
 };
 
+class ptx_thread_info;
+class symbol;
+
 namespace dao_sim{
 
-class reg {
-public:
-	reg() : status(0) {}
-	~reg();
 
-	char status;
+enum class REG_STATUS
+{
+	IN_VALID,
+	VALID
+};
+
+class Reg {
+public:
+	Reg() {}
+	~Reg();
+
+	REG_STATUS status = REG_STATUS::IN_VALID;
 	ptx_reg_t value;
 
 	void set(const ptx_reg_t &v) {
 		value = v;
-		status = 1;
+		status = REG_STATUS::VALID;
 	}
 
 	bool is_inited() {
-		return status != 0;
+		return status != REG_STATUS::IN_VALID;
 	}
+
+   bool is_valid() {
+		return status != REG_STATUS::IN_VALID;
+	}
+};
+
+
+
+
+class RegFile {
+public:
+
+   RegFile(size_t reg_nums) {
+      _registers.resize(reg_nums);
+   }
+   
+	~RegFile();
+
+   ptx_reg_t get_reg(const ptx_thread_info* thread, const symbol* reg);
+   void set_reg(const ptx_thread_info* thread, const symbol* reg, ptx_reg_t value);
+
+   Reg get_reg(unsigned index) {return _registers[index];}
+
+
+private:
+   std::vector<Reg> _registers;
 };
 
 

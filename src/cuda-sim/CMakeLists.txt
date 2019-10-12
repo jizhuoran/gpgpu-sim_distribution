@@ -22,4 +22,5 @@ set_source_files_properties(${BISON_ptxinfo_parser_OUTPUTS} PROPERTIES COMPILE_F
 ADD_FLEX_BISON_DEPENDENCY(ptxinfo_lexer ptxinfo_parser)
 
 file(GLOB_RECURSE cuda-sim-srcs ${CMAKE_CURRENT_SOURCE_DIR}/*.cc)
-add_library(cuda-sim SHARED ${cuda-sim-srcs} ${BISON_ptx_parser_OUTPUTS} ${BISON_ptxinfo_parser_OUTPUTS} ${FLEX_ptx_lexer_OUTPUTS} ${FLEX_ptxinfo_lexer_OUTPUTS} ${CMAKE_BINARY_DIR}/include/instructions.h ${CMAKE_BINARY_DIR}/include/ptx_parser_decode.def)
+file(GLOB_RECURSE dao-sim-srcs ${CMAKE_CURRENT_SOURCE_DIR}/../dao-sim/*.cpp)
+add_library(cuda-sim SHARED ${cuda-sim-srcs} ${dao-sim-srcs} ${BISON_ptx_parser_OUTPUTS} ${BISON_ptxinfo_parser_OUTPUTS} ${FLEX_ptx_lexer_OUTPUTS} ${FLEX_ptxinfo_lexer_OUTPUTS} ${CMAKE_BINARY_DIR}/include/instructions.h ${CMAKE_BINARY_DIR}/include/ptx_parser_decode.def)

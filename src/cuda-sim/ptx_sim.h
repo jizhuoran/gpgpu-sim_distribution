@@ -255,8 +255,9 @@ public:
 
    void set_reg_offset(unsigned reg_offset) { m_reg_offset = reg_offset; }
    void set_reg_size(unsigned reg_size) { m_reg_size = reg_size; }
-   unsigned get_reg_offset() { return m_reg_offset; }
-   unsigned get_reg_size() { return m_reg_size; }
+   unsigned get_reg_offset() const { return m_reg_offset; }
+   unsigned get_reg_size() const { return m_reg_size; }
+   unsigned get_reg_index(unsigned relative_index) const { return m_reg_offset + relative_index; }
 
 
    unsigned get_builtin( int builtin_id, unsigned dim_mod ); 
