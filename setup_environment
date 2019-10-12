@@ -79,7 +79,7 @@ if [ `uname` = "Darwin" ]; then
 	export DYLD_LIBRARY_PATH=`echo $DYLD_LIBRARY_PATH | sed -Ee 's#'$GPGPUSIM_ROOT'\/lib\/[0-9]+\/(debug|release):##'`
 	export DYLD_LIBRARY_PATH=$GPGPUSIM_ROOT/lib/$GPGPUSIM_CONFIG:$DYLD_LIBRARY_PATH
 else
-	export LD_LIBRARY_PATH=$GPGPUSIM_ROOT/cbuild/
+	export LD_LIBRARY_PATH=$GPGPUSIM_ROOT/build/
 fi
 
 

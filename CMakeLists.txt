@@ -46,3 +46,5 @@ ADD_CUSTOM_TARGET(
 	cudartv4 ALL  
 	COMMAND ${CMAKE_COMMAND} -E create_symlink ${CMAKE_BINARY_DIR}/libcudart.so ${CMAKE_BINARY_DIR}/libcudart.so.4)
 
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cuobjdump_to_ptxplus)

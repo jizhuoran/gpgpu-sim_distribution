@@ -1425,12 +1425,9 @@ unsigned ptx_sim_init_thread( kernel_info_t &kernel,
       *thread_info = NULL;
    }
 
-   std::cerr << "SJ: come to this, ptx_sim_init_thread" << std::endl;
+   std::cerr << "SJ: come to this, ptx_sim_init_thread with core " << core << std::endl;
 
    if ( !active_threads.empty() ) {
-
-      std::cerr << "SJ: come to this, !active_threads.empty()" << std::endl;
-
       assert( active_threads.size() <= threads_left );
       ptx_thread_info *thd = active_threads.front(); 
       active_threads.pop_front();
@@ -1502,11 +1499,17 @@ unsigned ptx_sim_init_thread( kernel_info_t &kernel,
          local_mem = new memory_space_impl<32>(buf,32);
          local_mem_lookup[new_tid] = local_mem;
       }
+      
+      thd->set_core(core);
       thd->set_info(kernel.entry());
       thd->set_nctaid(kernel.get_grid_dim());
       thd->set_ntid(kernel.get_cta_dim());
       thd->set_ctaid(ctaid3d);
       thd->set_tid(tid3d);
+
+      std::cerr << "The num_args of " << kernel.entry()->get_name() << " is " << kernel.entry()->get_kernel_info()->regs << std::endl;
+
+
       thd->set_reg_offset(kernel.entry()->get_kernel_info()->regs * new_tid);
       thd->set_reg_size(kernel.entry()->get_kernel_info()->regs);
 
@@ -1906,7 +1909,8 @@ void ptxinfo_function(const char *fname )
 
 void ptxinfo_regs( unsigned nregs )
 {
-    g_ptxinfo_kinfo.regs=nregs;
+   std::cerr << "SJ: the reg of ptxinfo_regs is " << nregs << std::endl;
+   g_ptxinfo_kinfo.regs=nregs;
 }
 
 void ptxinfo_lmem( unsigned declared, unsigned system )

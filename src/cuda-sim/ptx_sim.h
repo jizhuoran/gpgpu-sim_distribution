@@ -28,6 +28,7 @@
 #define ptx_sim_h_INCLUDED
 
 #include <stdlib.h>
+#include <iostream>
 
 #include "../abstract_hardware_model.h"
 #include "../tr1_hash_map.h" 
@@ -220,6 +221,7 @@ public:
    unsigned get_hw_wid() const { return m_hw_wid;}
    unsigned get_hw_sid() const { return m_hw_sid;}
    core_t *get_core() { return m_core; }
+   void set_core(core_t* core) { m_core = core; }
 
    unsigned get_icount() const { return m_icount;}
    void set_valid() { m_valid = true;}
@@ -387,7 +389,7 @@ private:
    unsigned m_local_mem_stack_pointer;
 
    typedef tr1_hash_map<const symbol*,ptx_reg_t> reg_map_t;
-   std::list<reg_map_t> m_regs;
+   // std::list<reg_map_t> m_regs;
    std::list<reg_map_t> m_debug_trace_regs_modified;
    std::list<reg_map_t> m_debug_trace_regs_read;
    bool m_enable_debug_trace;

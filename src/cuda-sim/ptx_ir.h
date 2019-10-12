@@ -255,7 +255,7 @@ public:
    unsigned reg_num() const
    {
       assert( m_reg_num_valid );
-      return m_reg_num; 
+      return m_reg_num - 1; 
    }
    unsigned arch_reg_num() const
    {
@@ -1205,6 +1205,7 @@ public:
       assert( n < m_args.size() );
       return m_args[n];
    }
+
    bool has_return() const
    {
       return m_return_var_sym != NULL;

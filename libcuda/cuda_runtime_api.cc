@@ -1561,9 +1561,12 @@ void cuobjdumpParseBinary(unsigned int handle){
 	const char *override_ptx_name = getenv("PTX_SIM_KERNELFILE"); 
    if (override_ptx_name == NULL or getenv("PTX_SIM_USE_PTX_FILE") == NULL) {
 		ptxcode = readfile(ptx->getPTXfilename());
+		std::cerr << "readfile as not get from " << ptx->getPTXfilename() << std::endl;
 	} else {
 		printf("GPGPU-Sim PTX: overriding embedded ptx with '%s' (PTX_SIM_USE_PTX_FILE is set)\n", override_ptx_name);
 		ptxcode = readfile(override_ptx_name);
+		std::cerr << "readfile from " << override_ptx_name << std::endl;
+
 	}
 	if(context->get_device()->get_gpgpu()->get_config().convert_to_ptxplus() ) {
 		cuobjdumpELFSection* elfsection = findELFSection(ptx->getIdentifier());
@@ -1576,9 +1579,19 @@ void cuobjdumpParseBinary(unsigned int handle){
 		printf("Adding %s with cubin handle %u\n", ptx->getPTXfilename().c_str(), handle);
 		context->add_binary(symtab, handle);
 		gpgpu_ptxinfo_load_from_string( ptxcode, handle);
+
+		std::cerr << "ptxcode is " << ptxcode << std::endl;
+		std::cerr << "==============" << std::endl;
+
+		std::cerr << "ptxplus_str is " << ptxplus_str << std::endl;
+
+
 		delete[] ptxplus_str;
 	} else {
 		symtab=gpgpu_ptx_sim_load_ptx_from_string(ptxcode, handle);
+		std::cerr << "ptxcode is " << ptxcode << std::endl;
+
+
 		printf("Adding %s with cubin handle %u\n", ptx->getPTXfilename().c_str(), handle);
 		context->add_binary(symtab, handle);
 		gpgpu_ptxinfo_load_from_string( ptxcode, handle);
@@ -2121,6 +2134,7 @@ kernel_info_t *gpgpu_cuda_ptx_sim_init_grid( const char *hostFun,
 		CUctx_st* context )
 {
 	function_info *entry = context->get_kernel(hostFun);
+
 	kernel_info_t *result = new kernel_info_t(gridDim,blockDim,entry);
 	if( entry == NULL ) {
 		printf("GPGPU-Sim PTX: ERROR launching kernel -- no PTX implementation found for %p\n", hostFun);

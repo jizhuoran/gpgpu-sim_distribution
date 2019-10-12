@@ -110,7 +110,7 @@ char* gpgpu_ptx_sim_convert_ptx_and_sass_to_ptxplus(const std::string ptxfilenam
 	// Run cuobjdump_to_ptxplus
 	char commandline[1024];
 	int result;
-	snprintf(commandline, 1024, "$GPGPUSIM_ROOT/build/$GPGPUSIM_CONFIG/cuobjdump_to_ptxplus/cuobjdump_to_ptxplus %s %s %s %s",
+	snprintf(commandline, 1024, "$GPGPUSIM_ROOT/build/cuobjdump_to_ptxplus/cuobjdump_to_ptxplus %s %s %s %s",
 			ptxfilename.c_str(),
 			sassfilename.c_str(),
 			elffilename.c_str(),
@@ -216,10 +216,10 @@ void gpgpu_ptxinfo_load_from_string( const char *p_for_info, unsigned source_num
     extra_flags[0]=0;
 
 #if CUDART_VERSION >= 3000
-    snprintf(extra_flags,1024,"--gpu-name=sm_20");
+    // snprintf(extra_flags,1024,"--gpu-name=sm_20");
 #endif
 
-    snprintf(commandline,1024,"$CUDA_INSTALL_PATH/bin/ptxas %s -v %s --output-file  /dev/null 2> %s",
+    snprintf(commandline,1024,"$CUDA_INSTALL_PATH/bin/ptxas --gpu-name=sm_10 %s -v %s --output-file  /dev/null 2> %s",
              extra_flags, fname2, tempfile_ptxinfo);
     printf("GPGPU-Sim PTX: generating ptxinfo using \"%s\"\n", commandline);
     result = system(commandline);

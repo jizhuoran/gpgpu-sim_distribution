@@ -162,7 +162,7 @@ ptx_thread_info::ptx_thread_info( kernel_info_t &kernel )
    m_hw_sid = -1;
    m_last_dram_callback.function = NULL;
    m_last_dram_callback.instruction = NULL;
-   m_regs.push_back( reg_map_t() );
+   // m_regs.push_back( reg_map_t() );
    m_debug_trace_regs_modified.push_back( reg_map_t() );
    m_debug_trace_regs_read.push_back( reg_map_t() );
    m_callstack.push_back( stack_entry() );
@@ -355,7 +355,8 @@ void ptx_thread_info::callstack_push( unsigned pc, unsigned rpc, const symbol *r
    m_last_was_call = true;
    assert( m_func_info != NULL );
    m_callstack.push_back( stack_entry(m_symbol_table,m_func_info,pc,rpc,return_var_src,return_var_dst,call_uid) );
-   m_regs.push_back( reg_map_t() );
+   assert(0);
+   // m_regs.push_back( reg_map_t() );
    m_debug_trace_regs_modified.push_back( reg_map_t() );
    m_debug_trace_regs_read.push_back( reg_map_t() );
    m_local_mem_stack_pointer += m_func_info->local_mem_framesize(); 
@@ -369,7 +370,9 @@ void ptx_thread_info::callstack_push_plus( unsigned pc, unsigned rpc, const symb
    m_last_was_call = true;
    assert( m_func_info != NULL );
    m_callstack.push_back( stack_entry(m_symbol_table,m_func_info,pc,rpc,return_var_src,return_var_dst,call_uid) );
-   //m_regs.push_back( reg_map_t() );
+
+   assert(0);
+   // m_regs.push_back( reg_map_t() );
    //m_debug_trace_regs_modified.push_back( reg_map_t() );
    //m_debug_trace_regs_read.push_back( reg_map_t() );
    m_local_mem_stack_pointer += m_func_info->local_mem_framesize();
@@ -381,6 +384,8 @@ bool ptx_thread_info::callstack_pop()
    const symbol *rv_src = m_callstack.back().m_return_var_src;
    const symbol *rv_dst = m_callstack.back().m_return_var_dst;
    assert( !((rv_src != NULL) ^ (rv_dst != NULL)) ); // ensure caller and callee agree on whether there is a return value
+
+   assert(0);
 
    // read return value from callee frame
    arg_buffer_t buffer;
@@ -398,7 +403,7 @@ bool ptx_thread_info::callstack_pop()
       m_local_mem_stack_pointer -= m_func_info->local_mem_framesize(); 
    }
    m_callstack.pop_back();
-   m_regs.pop_back();
+   // m_regs.pop_back();
    m_debug_trace_regs_modified.pop_back();
    m_debug_trace_regs_read.pop_back();
 
@@ -445,29 +450,33 @@ bool ptx_thread_info::callstack_pop_plus()
 
 void ptx_thread_info::dump_callstack() const
 {
-   std::list<stack_entry>::const_iterator c=m_callstack.begin();
-   std::list<reg_map_t>::const_iterator r=m_regs.begin();
 
-   printf("\n\n");
-   printf("Call stack for thread uid = %u (sc=%u, hwtid=%u)\n", m_uid, m_hw_sid, m_hw_tid );
-   while( c != m_callstack.end() && r != m_regs.end() ) {
-      const stack_entry &c_e = *c;
-      const reg_map_t &regs = *r;
-      if( !c_e.m_valid ) {
-         printf("  <entry>                              #regs = %zu\n", regs.size() );
-      } else {
-         printf("  %20s  PC=%3u RV= (callee=\'%s\',caller=\'%s\') #regs = %zu\n", 
-                c_e.m_func_info->get_name().c_str(), c_e.m_PC, 
-                c_e.m_return_var_src->name().c_str(), 
-                c_e.m_return_var_dst->name().c_str(), 
-                regs.size() );
-      }
-      c++;
-      r++;
-   }
-   if( c != m_callstack.end() || r != m_regs.end() ) {
-      printf("  *** mismatch in m_regs and m_callstack sizes ***\n" );
-   }
+   assert(0);
+
+   // std::list<stack_entry>::const_iterator c=m_callstack.begin();
+   // std::list<reg_map_t>::const_iterator r=m_regs.begin();
+
+
+   // printf("\n\n");
+   // printf("Call stack for thread uid = %u (sc=%u, hwtid=%u)\n", m_uid, m_hw_sid, m_hw_tid );
+   // while( c != m_callstack.end() && r != m_regs.end() ) {
+   //    const stack_entry &c_e = *c;
+   //    const reg_map_t &regs = *r;
+   //    if( !c_e.m_valid ) {
+   //       printf("  <entry>                              #regs = %zu\n", regs.size() );
+   //    } else {
+   //       printf("  %20s  PC=%3u RV= (callee=\'%s\',caller=\'%s\') #regs = %zu\n", 
+   //              c_e.m_func_info->get_name().c_str(), c_e.m_PC, 
+   //              c_e.m_return_var_src->name().c_str(), 
+   //              c_e.m_return_var_dst->name().c_str(), 
+   //              regs.size() );
+   //    }
+   //    c++;
+   //    r++;
+   // }
+   // if( c != m_callstack.end() || r != m_regs.end() ) {
+   //    printf("  *** mismatch in m_regs and m_callstack sizes ***\n" );
+   // }
    printf("\n\n");
 }
 
@@ -491,17 +500,28 @@ const ptx_instruction *ptx_thread_info::get_inst( addr_t pc ) const
 
 void ptx_thread_info::dump_regs( FILE *fp )
 {
-   if(m_regs.empty()) return;
-   if(m_regs.back().empty()) return;
+   // if(m_regs.empty()) return;
+   // if(m_regs.back().empty()) return;
    fprintf(fp,"Register File Contents:\n");
    fflush(fp);
    reg_map_t::const_iterator r;
-   for ( r=m_regs.back().begin(); r != m_regs.back().end(); ++r ) {
-      const symbol *sym = r->first;
-      ptx_reg_t value = r->second;
-      std::string name = sym->name();
-      print_reg(fp,name,value,m_symbol_table);
+   
+   for (int i = 0; i < get_reg_offset(); ++i) {
+      // const symbol *sym = r->first;
+      if (m_core->registers[get_reg_offset() + i].is_inited()) {
+         ptx_reg_t value = m_core->registers[get_reg_offset() + i].value;
+         std::string name = "not implemented yet"; //sym->name();
+         print_reg(fp,name,value,m_symbol_table);
+      }
+      
    }
+
+   // for ( r=m_regs.back().begin(); r != m_regs.back().end(); ++r ) {
+   //    const symbol *sym = r->first;
+   //    ptx_reg_t value = r->second;
+   //    std::string name = sym->name();
+   //    print_reg(fp,name,value,m_symbol_table);
+   // }
 }
 
 void ptx_thread_info::dump_modifiedregs(FILE *fp)

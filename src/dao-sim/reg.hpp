@@ -105,6 +105,10 @@ public:
 		value = v;
 		status = 1;
 	}
+
+	bool is_inited() {
+		return status != 0;
+	}
 };
 
 
